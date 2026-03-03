@@ -281,3 +281,761 @@
 2026-03-03 17:42:27.287 | INFO     | __main__:main:216 - 用户手动停止程序
 2026-03-03 17:42:27.287 | INFO     | __main__:main:217 - 本次运行共处理 1 条消息
 2026-03-03 17:42:27.287 | INFO     | __main__:main:218 - ============================================================
+2026-03-03 19:58:19.629 | INFO     | __main__:main:80 - ============================================================
+2026-03-03 19:58:19.629 | INFO     | __main__:main:81 - 微信表格自动化处理工具启动
+2026-03-03 19:58:19.629 | INFO     | __main__:main:82 - ============================================================
+2026-03-03 19:58:19.634 | INFO     | __main__:load_config:23 - ✓ 配置文件加载成功
+2026-03-03 19:58:19.634 | INFO     | src.config_validator:validate:32 - 开始验证配置文件...
+2026-03-03 19:58:19.634 | INFO     | src.config_validator:validate:56 - ✓ 本地模式配置有效: data/temp_images
+2026-03-03 19:58:19.634 | INFO     | src.config_validator:validate:71 - ✓ 输出配置有效: data/output_excel
+2026-03-03 19:58:19.634 | INFO     | src.config_validator:validate:92 - ✓ API Key 配置有效
+2026-03-03 19:58:19.634 | INFO     | src.config_validator:validate:98 - ✓ Base URL 配置有效: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-03-03 19:58:19.638 | INFO     | src.config_validator:validate:104 - ✓ 模型名称配置有效: qwen-vl-plus
+2026-03-03 19:58:19.638 | INFO     | src.config_validator:validate:129 - ✓ 配置文件验证通过！
+2026-03-03 19:58:19.639 | INFO     | __main__:create_listener:49 - 
+【监听模式】本地文件模式（推荐）
+2026-03-03 19:58:19.640 | INFO     | __main__:create_listener:50 - 【监听目录】data/temp_images
+2026-03-03 19:58:19.640 | INFO     | __main__:create_listener:51 - 【说明】请将要处理的图片放到此目录
+2026-03-03 19:58:19.641 | INFO     | src.wechat_listener:__init__:50 - ✓ 本地文件监听器初始化成功
+2026-03-03 19:58:19.641 | INFO     | src.wechat_listener:__init__:51 -   监听目录: D:\acceptance_file\one\WeChat_Excel_Automator\data\temp_images
+2026-03-03 19:58:19.641 | INFO     | src.wechat_listener:__init__:52 -   说明: 请将要处理的图片放到此目录
+2026-03-03 19:58:19.642 | INFO     | src.wechat_listener:__init__:53 -   支持格式: .jpg, .jpeg, .png, .bmp, .gif, .webp, .txt
+2026-03-03 19:58:19.642 | INFO     | __main__:main:101 - 正在初始化其他模块...
+2026-03-03 19:58:20.672 | INFO     | src.llm_vision_parser:__init__:30 - ✓ 大模型客户端初始化成功: qwen-vl-plus
+2026-03-03 19:58:20.672 | INFO     | __main__:main:110 - ✓ 大模型解析模块初始化完成
+2026-03-03 19:58:20.672 | INFO     | __main__:main:116 - ✓ 图片处理模块初始化完成
+2026-03-03 19:58:20.672 | INFO     | src.excel_engine:__init__:52 - ✓ Excel 生成器初始化完成，输出目录: data/output_excel
+2026-03-03 19:58:20.672 | INFO     | __main__:main:119 - ✓ Excel 生成模块初始化完成
+2026-03-03 19:58:20.672 | INFO     | __main__:main:121 - ------------------------------------------------------------
+2026-03-03 19:58:20.672 | INFO     | __main__:main:122 - 系统初始化成功！开始监听消息...
+2026-03-03 19:58:20.672 | INFO     | __main__:main:123 - 输出目录: data/output_excel
+2026-03-03 19:58:20.672 | INFO     | __main__:main:124 - ------------------------------------------------------------
+2026-03-03 19:58:20.672 | INFO     | __main__:main:138 - 
+💡 本地文件模式提示：
+2026-03-03 19:58:20.672 | INFO     | __main__:main:139 -    请将要处理的图片文件放到: data/temp_images
+2026-03-03 19:58:20.677 | INFO     | __main__:main:140 -    支持的图片格式: .jpg, .jpeg, .png, .bmp, .gif, .webp
+2026-03-03 19:58:20.677 | INFO     | __main__:main:141 -    支持的文本格式: .txt
+2026-03-03 19:58:20.677 | INFO     | __main__:main:142 - 
+2026-03-03 19:58:26.682 | INFO     | __main__:main:153 - 
+📬 收到 1 条待处理消息
+2026-03-03 19:58:26.682 | INFO     | __main__:main:157 - 【1/1】处理来自【LocalFile】的image信息...
+2026-03-03 19:58:26.685 | INFO     | src.image_processor:preprocess_image:67 - 原始图片尺寸: 1356x203
+2026-03-03 19:58:26.686 | INFO     | src.image_processor:preprocess_image:79 - 执行降噪processing...
+2026-03-03 19:58:26.705 | INFO     | src.image_processor:preprocess_image:83 - 执行对比度增强...
+2026-03-03 19:58:26.880 | INFO     | src.image_processor:preprocess_image:87 - 执行自动旋转校正...
+2026-03-03 19:58:26.908 | INFO     | src.image_processor:preprocess_image:103 - ✓ 预处理完成，临时保存至: data/temp_images/processed\temp_56217e648e7c2900e681a21ef8bb19a7.jpg
+2026-03-03 19:58:26.908 | INFO     | src.llm_vision_parser:parse_content:114 - 已加载图片: data/temp_images/processed\temp_56217e648e7c2900e681a21ef8bb19a7.jpg
+2026-03-03 19:58:26.908 | INFO     | src.llm_vision_parser:parse_content:124 - 正在调用大模型进行数据解析（第1/3次）...
+2026-03-03 19:58:31.585 | INFO     | src.llm_vision_parser:parse_content:151 - ✓ 解析成功，提取到 4 条记录
+2026-03-03 19:58:31.587 | INFO     | src.data_validator:validate_and_clean:114 - ========== 数据清洗统计 ==========
+2026-03-03 19:58:31.587 | INFO     | src.data_validator:validate_and_clean:115 -   总记录数: 4
+2026-03-03 19:58:31.587 | INFO     | src.data_validator:validate_and_clean:116 -   有效记录数: 4
+2026-03-03 19:58:31.587 | INFO     | src.data_validator:validate_and_clean:117 -   跳过记录数: 0
+2026-03-03 19:58:31.587 | INFO     | src.data_validator:validate_and_clean:118 -   清洗完成率: 4/4 (100%)
+2026-03-03 19:58:31.587 | INFO     | src.data_validator:validate_and_clean:119 - ================================
+2026-03-03 19:58:31.587 | INFO     | __main__:main:187 - ✓ 解析成功 - 提取 4 条有效记录
+2026-03-03 19:58:31.591 | INFO     | src.excel_engine:generate:93 - ✓ 已创建 DataFrame: 4 行 x 6 列
+2026-03-03 19:58:31.616 | INFO     | src.excel_engine:generate:106 - ✓ Excel 文件已保存: data/output_excel\表格_LocalFile_20260303_195831.xlsx
+2026-03-03 19:58:31.645 | INFO     | src.excel_engine:generate:111 - ✓ Excel 格式化完成
+2026-03-03 19:58:31.645 | INFO     | src.excel_engine:generate:116 - ========== Excel 生成统计 ==========
+2026-03-03 19:58:31.645 | INFO     | src.excel_engine:generate:117 -   记录数: 4
+2026-03-03 19:58:31.648 | INFO     | src.excel_engine:generate:118 -   字段数: 6
+2026-03-03 19:58:31.650 | INFO     | src.excel_engine:generate:119 -   文件大小: 5.2 KB
+2026-03-03 19:58:31.651 | INFO     | src.excel_engine:generate:120 -   保存路径: data/output_excel\表格_LocalFile_20260303_195831.xlsx
+2026-03-03 19:58:31.651 | INFO     | src.excel_engine:generate:121 - ==================================
+2026-03-03 19:58:31.652 | INFO     | __main__:main:196 - ✓ Excel 已保存: data/output_excel\表格_LocalFile_20260303_195831.xlsx
+2026-03-03 19:59:23.681 | INFO     | __main__:main:153 - 
+📬 收到 1 条待处理消息
+2026-03-03 19:59:23.681 | INFO     | __main__:main:157 - 【1/1】处理来自【LocalFile】的image信息...
+2026-03-03 19:59:23.681 | INFO     | src.image_processor:preprocess_image:67 - 原始图片尺寸: 539x158
+2026-03-03 19:59:23.681 | INFO     | src.image_processor:preprocess_image:79 - 执行降噪processing...
+2026-03-03 19:59:23.691 | INFO     | src.image_processor:preprocess_image:83 - 执行对比度增强...
+2026-03-03 19:59:23.696 | INFO     | src.image_processor:preprocess_image:87 - 执行自动旋转校正...
+2026-03-03 19:59:23.706 | INFO     | src.image_processor:preprocess_image:103 - ✓ 预处理完成，临时保存至: data/temp_images/processed\temp_16b20e9716e2dd4d2be8ea753c336082.jpg
+2026-03-03 19:59:23.706 | INFO     | src.llm_vision_parser:parse_content:114 - 已加载图片: data/temp_images/processed\temp_16b20e9716e2dd4d2be8ea753c336082.jpg
+2026-03-03 19:59:23.706 | INFO     | src.llm_vision_parser:parse_content:124 - 正在调用大模型进行数据解析（第1/3次）...
+2026-03-03 19:59:44.058 | INFO     | src.llm_vision_parser:parse_content:151 - ✓ 解析成功，提取到 4 条记录
+2026-03-03 19:59:44.059 | INFO     | src.data_validator:validate_and_clean:114 - ========== 数据清洗统计 ==========
+2026-03-03 19:59:44.059 | INFO     | src.data_validator:validate_and_clean:115 -   总记录数: 4
+2026-03-03 19:59:44.059 | INFO     | src.data_validator:validate_and_clean:116 -   有效记录数: 4
+2026-03-03 19:59:44.060 | INFO     | src.data_validator:validate_and_clean:117 -   跳过记录数: 0
+2026-03-03 19:59:44.060 | INFO     | src.data_validator:validate_and_clean:118 -   清洗完成率: 4/4 (100%)
+2026-03-03 19:59:44.060 | INFO     | src.data_validator:validate_and_clean:119 - ================================
+2026-03-03 19:59:44.060 | INFO     | __main__:main:187 - ✓ 解析成功 - 提取 4 条有效记录
+2026-03-03 19:59:44.062 | INFO     | src.excel_engine:generate:93 - ✓ 已创建 DataFrame: 4 行 x 6 列
+2026-03-03 19:59:44.080 | INFO     | src.excel_engine:generate:106 - ✓ Excel 文件已保存: data/output_excel\表格_LocalFile_20260303_195944.xlsx
+2026-03-03 19:59:44.103 | INFO     | src.excel_engine:generate:111 - ✓ Excel 格式化完成
+2026-03-03 19:59:44.104 | INFO     | src.excel_engine:generate:116 - ========== Excel 生成统计 ==========
+2026-03-03 19:59:44.105 | INFO     | src.excel_engine:generate:117 -   记录数: 4
+2026-03-03 19:59:44.105 | INFO     | src.excel_engine:generate:118 -   字段数: 6
+2026-03-03 19:59:44.105 | INFO     | src.excel_engine:generate:119 -   文件大小: 5.2 KB
+2026-03-03 19:59:44.105 | INFO     | src.excel_engine:generate:120 -   保存路径: data/output_excel\表格_LocalFile_20260303_195944.xlsx
+2026-03-03 19:59:44.106 | INFO     | src.excel_engine:generate:121 - ==================================
+2026-03-03 19:59:44.106 | INFO     | __main__:main:196 - ✓ Excel 已保存: data/output_excel\表格_LocalFile_20260303_195944.xlsx
+2026-03-03 20:15:43.685 | INFO     | __main__:<module>:220 - 
+============================================================
+2026-03-03 20:15:43.687 | INFO     | __main__:<module>:221 - 🚀 开始测试动态列名功能
+2026-03-03 20:15:43.687 | INFO     | __main__:<module>:222 - ============================================================
+2026-03-03 20:15:43.687 | INFO     | __main__:test_scenario_1:31 - 
+============================================================
+2026-03-03 20:15:43.688 | INFO     | __main__:test_scenario_1:32 - 🧪 测试场景 1：有列名的表格
+2026-03-03 20:15:43.688 | INFO     | __main__:test_scenario_1:33 - ============================================================
+2026-03-03 20:15:43.688 | INFO     | __main__:test_scenario_1:48 - 📊 LLM 识别结果:
+2026-03-03 20:15:43.688 | INFO     | __main__:test_scenario_1:49 -   - 表格: True
+2026-03-03 20:15:43.688 | INFO     | __main__:test_scenario_1:50 -   - 列名: ['题型', '题量', '分值', '考试时间测算']
+2026-03-03 20:15:43.688 | INFO     | __main__:test_scenario_1:51 -   - 行数: 3
+2026-03-03 20:15:43.688 | INFO     | __main__:test_scenario_1:54 - 
+[步骤 1] 检测表格结构...
+2026-03-03 20:15:43.689 | INFO     | src.table_structure_detector:detect_structure:59 - ✓ 表格结构检测完成
+2026-03-03 20:15:43.689 | INFO     | src.table_structure_detector:detect_structure:60 -   - 有表格: True
+2026-03-03 20:15:43.689 | INFO     | src.table_structure_detector:detect_structure:61 -   - 有列名: True
+2026-03-03 20:15:43.689 | INFO     | src.table_structure_detector:detect_structure:63 -   - 列名: ['题型', '题量', '分值', '考试时间测算']
+2026-03-03 20:15:43.689 | INFO     | src.table_structure_detector:detect_structure:64 -   - 数据行数: 3
+2026-03-03 20:15:43.689 | INFO     | src.table_structure_detector:detect_structure:65 -   - 数据格式: object
+2026-03-03 20:15:43.689 | INFO     | __main__:test_scenario_1:59 - ✓ 表格结构检测成功
+2026-03-03 20:15:43.689 | INFO     | __main__:test_scenario_1:62 - 
+[步骤 2] 规范化数据...
+2026-03-03 20:15:43.690 | INFO     | __main__:test_scenario_1:65 - ✓ 数据规范化成功，3 条记录
+2026-03-03 20:15:43.690 | INFO     | __main__:test_scenario_1:68 - 
+[步骤 3] 清洗数据...
+2026-03-03 20:15:43.690 | INFO     | src.data_validator:validate_and_clean:56 - 📋 开始数据清洗，列名: ['题型', '题量', '分值', '考试时间测算']
+2026-03-03 20:15:43.691 | INFO     | src.data_validator:validate_and_clean:130 - ========== 数据清洗统计 ==========
+2026-03-03 20:15:43.691 | INFO     | src.data_validator:validate_and_clean:131 -   总记录数: 3
+2026-03-03 20:15:43.691 | INFO     | src.data_validator:validate_and_clean:132 -   有效记录数: 3
+2026-03-03 20:15:43.692 | INFO     | src.data_validator:validate_and_clean:133 -   跳过记录数: 0
+2026-03-03 20:15:43.692 | INFO     | src.data_validator:validate_and_clean:135 -   清洗完成率: 3/3 (100%)
+2026-03-03 20:15:43.692 | INFO     | src.data_validator:validate_and_clean:136 - ================================
+2026-03-03 20:15:43.693 | INFO     | __main__:test_scenario_1:75 - ✓ 数据清洗成功，3 条有效记录
+2026-03-03 20:15:43.693 | INFO     | __main__:test_scenario_1:78 - 
+[步骤 4] 生成 Excel...
+2026-03-03 20:15:43.693 | INFO     | src.excel_engine:__init__:50 - ✓ Excel 生成器初始化完成，输出目录: data/output_excel
+2026-03-03 20:15:43.694 | INFO     | src.excel_engine:generate:91 - ✓ 列名确定: ['题型', '题量', '分值', '考试时间测算']
+2026-03-03 20:15:43.696 | INFO     | src.excel_engine:generate:104 - ✓ 已创建 DataFrame: 3 行 x 4 列
+2026-03-03 20:15:43.719 | INFO     | src.excel_engine:generate:117 - ✓ Excel 文件已保存: data/output_excel\表格_测试场景1_有列名_20260303_201543.xlsx
+2026-03-03 20:15:43.738 | INFO     | src.excel_engine:generate:122 - ✓ Excel 格式化完成
+2026-03-03 20:15:43.738 | INFO     | src.excel_engine:generate:127 - ========== Excel 生成统计 ==========
+2026-03-03 20:15:43.739 | INFO     | src.excel_engine:generate:128 -   记录数: 3
+2026-03-03 20:15:43.739 | INFO     | src.excel_engine:generate:129 -   字段数: 4
+2026-03-03 20:15:43.739 | INFO     | src.excel_engine:generate:130 -   文件大小: 5.1 KB
+2026-03-03 20:15:43.739 | INFO     | src.excel_engine:generate:131 -   保存路径: data/output_excel\表格_测试场景1_有列名_20260303_201543.xlsx
+2026-03-03 20:15:43.739 | INFO     | src.excel_engine:generate:132 - ==================================
+2026-03-03 20:15:43.739 | INFO     | __main__:test_scenario_1:87 - ✓ Excel 生成成功: data/output_excel\表格_测试场景1_有列名_20260303_201543.xlsx
+2026-03-03 20:15:43.739 | INFO     | __main__:test_scenario_2:94 - 
+============================================================
+2026-03-03 20:15:43.739 | INFO     | __main__:test_scenario_2:95 - 🧪 测试场景 2：无列名的表格
+2026-03-03 20:15:43.739 | INFO     | __main__:test_scenario_2:96 - ============================================================
+2026-03-03 20:15:43.739 | INFO     | __main__:test_scenario_2:111 - 📊 LLM 识别结果:
+2026-03-03 20:15:43.739 | INFO     | __main__:test_scenario_2:112 -   - 表格: True
+2026-03-03 20:15:43.739 | INFO     | __main__:test_scenario_2:113 -   - 有列名: False
+2026-03-03 20:15:43.739 | INFO     | __main__:test_scenario_2:114 -   - 行数: 3
+2026-03-03 20:15:43.743 | INFO     | __main__:test_scenario_2:117 - 
+[步骤 1] 检测表格结构...
+2026-03-03 20:15:43.743 | INFO     | src.table_structure_detector:detect_structure:59 - ✓ 表格结构检测完成
+2026-03-03 20:15:43.743 | INFO     | src.table_structure_detector:detect_structure:60 -   - 有表格: True
+2026-03-03 20:15:43.743 | INFO     | src.table_structure_detector:detect_structure:61 -   - 有列名: False
+2026-03-03 20:15:43.743 | INFO     | src.table_structure_detector:detect_structure:64 -   - 数据行数: 3
+2026-03-03 20:15:43.743 | INFO     | src.table_structure_detector:detect_structure:65 -   - 数据格式: array
+2026-03-03 20:15:43.743 | INFO     | __main__:test_scenario_2:122 - ✓ 表格结构检测成功（识别为无列名表格）
+2026-03-03 20:15:43.743 | INFO     | __main__:test_scenario_2:125 - 
+[步骤 2] 规范化数据...
+2026-03-03 20:15:43.743 | INFO     | __main__:test_scenario_2:129 - ✓ 数据规范化成功，3 条记录
+2026-03-03 20:15:43.743 | INFO     | __main__:test_scenario_2:130 -   自动生成的列名: ['列1', '列2', '列3']
+2026-03-03 20:15:43.743 | INFO     | __main__:test_scenario_2:133 - 
+[步骤 3] 清洗数据...
+2026-03-03 20:15:43.743 | INFO     | src.data_validator:validate_and_clean:56 - 📋 开始数据清洗，列名: ['列1', '列2', '列3']
+2026-03-03 20:15:43.743 | INFO     | src.data_validator:validate_and_clean:130 - ========== 数据清洗统计 ==========
+2026-03-03 20:15:43.743 | INFO     | src.data_validator:validate_and_clean:131 -   总记录数: 3
+2026-03-03 20:15:43.743 | INFO     | src.data_validator:validate_and_clean:132 -   有效记录数: 3
+2026-03-03 20:15:43.748 | INFO     | src.data_validator:validate_and_clean:133 -   跳过记录数: 0
+2026-03-03 20:15:43.748 | INFO     | src.data_validator:validate_and_clean:135 -   清洗完成率: 3/3 (100%)
+2026-03-03 20:15:43.748 | INFO     | src.data_validator:validate_and_clean:136 - ================================
+2026-03-03 20:15:43.748 | INFO     | __main__:test_scenario_2:140 - ✓ 数据清洗成功，3 条有效记录
+2026-03-03 20:15:43.748 | INFO     | __main__:test_scenario_2:143 - 
+[步骤 4] 生成 Excel...
+2026-03-03 20:15:43.748 | INFO     | src.excel_engine:__init__:50 - ✓ Excel 生成器初始化完成，输出目录: data/output_excel
+2026-03-03 20:15:43.748 | INFO     | src.excel_engine:generate:91 - ✓ 列名确定: ['列1', '列2', '列3']
+2026-03-03 20:15:43.748 | INFO     | src.excel_engine:generate:104 - ✓ 已创建 DataFrame: 3 行 x 3 列
+2026-03-03 20:15:43.767 | INFO     | src.excel_engine:generate:117 - ✓ Excel 文件已保存: data/output_excel\表格_测试场景2_无列名_20260303_201543.xlsx
+2026-03-03 20:15:43.786 | INFO     | src.excel_engine:generate:122 - ✓ Excel 格式化完成
+2026-03-03 20:15:43.787 | INFO     | src.excel_engine:generate:127 - ========== Excel 生成统计 ==========
+2026-03-03 20:15:43.787 | INFO     | src.excel_engine:generate:128 -   记录数: 3
+2026-03-03 20:15:43.787 | INFO     | src.excel_engine:generate:129 -   字段数: 3
+2026-03-03 20:15:43.788 | INFO     | src.excel_engine:generate:130 -   文件大小: 5.1 KB
+2026-03-03 20:15:43.788 | INFO     | src.excel_engine:generate:131 -   保存路径: data/output_excel\表格_测试场景2_无列名_20260303_201543.xlsx
+2026-03-03 20:15:43.788 | INFO     | src.excel_engine:generate:132 - ==================================
+2026-03-03 20:15:43.789 | INFO     | __main__:test_scenario_2:152 - ✓ Excel 生成成功: data/output_excel\表格_测试场景2_无列名_20260303_201543.xlsx
+2026-03-03 20:15:43.789 | INFO     | __main__:test_scenario_3:159 - 
+============================================================
+2026-03-03 20:15:43.789 | INFO     | __main__:test_scenario_3:160 - 🧪 测试场景 3：产品类表格（不同列名）
+2026-03-03 20:15:43.789 | INFO     | __main__:test_scenario_3:161 - ============================================================
+2026-03-03 20:15:43.790 | INFO     | __main__:test_scenario_3:176 - 📊 LLM 识别结果:
+2026-03-03 20:15:43.790 | INFO     | __main__:test_scenario_3:177 -   - 表格: True
+2026-03-03 20:15:43.790 | INFO     | __main__:test_scenario_3:178 -   - 列名: ['品名', '规格', '材质', '产地', '仓库', '价格']
+2026-03-03 20:15:43.790 | INFO     | __main__:test_scenario_3:179 -   - 行数: 3
+2026-03-03 20:15:43.791 | INFO     | __main__:test_scenario_3:182 - 
+[步骤 1] 检测表格结构...
+2026-03-03 20:15:43.791 | INFO     | src.table_structure_detector:detect_structure:59 - ✓ 表格结构检测完成
+2026-03-03 20:15:43.791 | INFO     | src.table_structure_detector:detect_structure:60 -   - 有表格: True
+2026-03-03 20:15:43.791 | INFO     | src.table_structure_detector:detect_structure:61 -   - 有列名: True
+2026-03-03 20:15:43.792 | INFO     | src.table_structure_detector:detect_structure:63 -   - 列名: ['品名', '规格', '材质', '产地', '仓库', '价格']
+2026-03-03 20:15:43.792 | INFO     | src.table_structure_detector:detect_structure:64 -   - 数据行数: 3
+2026-03-03 20:15:43.792 | INFO     | src.table_structure_detector:detect_structure:65 -   - 数据格式: object
+2026-03-03 20:15:43.793 | INFO     | __main__:test_scenario_3:186 - ✓ 表格结构检测成功
+2026-03-03 20:15:43.793 | INFO     | __main__:test_scenario_3:189 - 
+[步骤 2] 规范化数据...
+2026-03-03 20:15:43.793 | INFO     | __main__:test_scenario_3:192 - ✓ 数据规范化成功，3 条记录
+2026-03-03 20:15:43.793 | INFO     | __main__:test_scenario_3:195 - 
+[步骤 3] 清洗数据...
+2026-03-03 20:15:43.794 | INFO     | src.data_validator:validate_and_clean:56 - 📋 开始数据清洗，列名: ['品名', '规格', '材质', '产地', '仓库', '价格']
+2026-03-03 20:15:43.794 | INFO     | src.data_validator:validate_and_clean:130 - ========== 数据清洗统计 ==========
+2026-03-03 20:15:43.794 | INFO     | src.data_validator:validate_and_clean:131 -   总记录数: 3
+2026-03-03 20:15:43.794 | INFO     | src.data_validator:validate_and_clean:132 -   有效记录数: 3
+2026-03-03 20:15:43.794 | INFO     | src.data_validator:validate_and_clean:133 -   跳过记录数: 0
+2026-03-03 20:15:43.794 | INFO     | src.data_validator:validate_and_clean:135 -   清洗完成率: 3/3 (100%)
+2026-03-03 20:15:43.794 | INFO     | src.data_validator:validate_and_clean:136 - ================================
+2026-03-03 20:15:43.794 | INFO     | __main__:test_scenario_3:202 - ✓ 数据清洗成功，3 条有效记录
+2026-03-03 20:15:43.794 | INFO     | __main__:test_scenario_3:205 - 
+[步骤 4] 生成 Excel...
+2026-03-03 20:15:43.794 | INFO     | src.excel_engine:__init__:50 - ✓ Excel 生成器初始化完成，输出目录: data/output_excel
+2026-03-03 20:15:43.794 | INFO     | src.excel_engine:generate:91 - ✓ 列名确定: ['品名', '规格', '材质', '产地', '仓库', '价格']
+2026-03-03 20:15:43.799 | INFO     | src.excel_engine:generate:104 - ✓ 已创建 DataFrame: 3 行 x 6 列
+2026-03-03 20:15:43.816 | INFO     | src.excel_engine:generate:117 - ✓ Excel 文件已保存: data/output_excel\表格_测试场景3_产品类_20260303_201543.xlsx
+2026-03-03 20:15:43.830 | INFO     | src.excel_engine:generate:122 - ✓ Excel 格式化完成
+2026-03-03 20:15:43.830 | INFO     | src.excel_engine:generate:127 - ========== Excel 生成统计 ==========
+2026-03-03 20:15:43.830 | INFO     | src.excel_engine:generate:128 -   记录数: 3
+2026-03-03 20:15:43.835 | INFO     | src.excel_engine:generate:129 -   字段数: 6
+2026-03-03 20:15:43.835 | INFO     | src.excel_engine:generate:130 -   文件大小: 5.2 KB
+2026-03-03 20:15:43.835 | INFO     | src.excel_engine:generate:131 -   保存路径: data/output_excel\表格_测试场景3_产品类_20260303_201543.xlsx
+2026-03-03 20:15:43.835 | INFO     | src.excel_engine:generate:132 - ==================================
+2026-03-03 20:15:43.835 | INFO     | __main__:test_scenario_3:214 - ✓ Excel 生成成功: data/output_excel\表格_测试场景3_产品类_20260303_201543.xlsx
+2026-03-03 20:15:43.837 | INFO     | __main__:<module>:230 - 
+============================================================
+2026-03-03 20:15:43.837 | INFO     | __main__:<module>:231 - ✅ 所有测试通过！
+2026-03-03 20:15:43.837 | INFO     | __main__:<module>:232 - ============================================================
+2026-03-03 20:15:43.837 | INFO     | __main__:<module>:233 - 
+所有修改已完成且验证成功！
+2026-03-03 20:15:43.838 | INFO     | __main__:<module>:234 - 主要改进:
+2026-03-03 20:15:43.838 | INFO     | __main__:<module>:235 -   1. ✓ 支持动态列名识别
+2026-03-03 20:15:43.838 | INFO     | __main__:<module>:236 -   2. ✓ 支持无列名表格处理
+2026-03-03 20:15:43.838 | INFO     | __main__:<module>:237 -   3. ✓ 自动列名与数据对应
+2026-03-03 20:15:43.839 | INFO     | __main__:<module>:238 -   4. ✓ Excel 格式正确生成
+2026-03-03 20:17:38.817 | INFO     | __main__:main:153 - 
+📬 收到 1 条待处理消息
+2026-03-03 20:17:38.819 | INFO     | __main__:main:157 - 【1/1】处理来自【LocalFile】的image信息...
+2026-03-03 20:17:38.835 | INFO     | src.image_processor:preprocess_image:67 - 原始图片尺寸: 1080x1665
+2026-03-03 20:17:38.836 | INFO     | src.image_processor:preprocess_image:79 - 执行降噪processing...
+2026-03-03 20:17:38.966 | INFO     | src.image_processor:preprocess_image:83 - 执行对比度增强...
+2026-03-03 20:17:38.991 | INFO     | src.image_processor:preprocess_image:87 - 执行自动旋转校正...
+2026-03-03 20:17:39.042 | INFO     | src.image_processor:preprocess_image:103 - ✓ 预处理完成，临时保存至: data/temp_images/processed\temp_4718805f8faa858557b4fbfb1485eb38.jpg
+2026-03-03 20:17:39.046 | INFO     | src.llm_vision_parser:parse_content:114 - 已加载图片: data/temp_images/processed\temp_4718805f8faa858557b4fbfb1485eb38.jpg
+2026-03-03 20:17:39.046 | INFO     | src.llm_vision_parser:parse_content:124 - 正在调用大模型进行数据解析（第1/3次）...
+2026-03-03 20:17:45.513 | INFO     | src.llm_vision_parser:parse_content:151 - ✓ 解析成功，提取到 9 条记录
+2026-03-03 20:17:45.513 | INFO     | src.data_validator:validate_and_clean:114 - ========== 数据清洗统计 ==========
+2026-03-03 20:17:45.513 | INFO     | src.data_validator:validate_and_clean:115 -   总记录数: 9
+2026-03-03 20:17:45.513 | INFO     | src.data_validator:validate_and_clean:116 -   有效记录数: 7
+2026-03-03 20:17:45.516 | INFO     | src.data_validator:validate_and_clean:117 -   跳过记录数: 2
+2026-03-03 20:17:45.516 | INFO     | src.data_validator:validate_and_clean:118 -   清洗完成率: 7/9 (77%)
+2026-03-03 20:17:45.516 | INFO     | src.data_validator:validate_and_clean:119 - ================================
+2026-03-03 20:17:45.516 | INFO     | __main__:main:187 - ✓ 解析成功 - 提取 7 条有效记录
+2026-03-03 20:17:45.518 | INFO     | src.excel_engine:generate:93 - ✓ 已创建 DataFrame: 7 行 x 6 列
+2026-03-03 20:17:45.531 | INFO     | src.excel_engine:generate:106 - ✓ Excel 文件已保存: data/output_excel\表格_LocalFile_20260303_201745.xlsx
+2026-03-03 20:17:45.552 | INFO     | src.excel_engine:generate:111 - ✓ Excel 格式化完成
+2026-03-03 20:17:45.552 | INFO     | src.excel_engine:generate:116 - ========== Excel 生成统计 ==========
+2026-03-03 20:17:45.552 | INFO     | src.excel_engine:generate:117 -   记录数: 7
+2026-03-03 20:17:45.552 | INFO     | src.excel_engine:generate:118 -   字段数: 6
+2026-03-03 20:17:45.552 | INFO     | src.excel_engine:generate:119 -   文件大小: 5.4 KB
+2026-03-03 20:17:45.552 | INFO     | src.excel_engine:generate:120 -   保存路径: data/output_excel\表格_LocalFile_20260303_201745.xlsx
+2026-03-03 20:17:45.552 | INFO     | src.excel_engine:generate:121 - ==================================
+2026-03-03 20:17:45.552 | INFO     | __main__:main:196 - ✓ Excel 已保存: data/output_excel\表格_LocalFile_20260303_201745.xlsx
+2026-03-03 20:18:23.393 | INFO     | __main__:main:215 - 
+============================================================
+2026-03-03 20:18:23.393 | INFO     | __main__:main:216 - 用户手动停止程序
+2026-03-03 20:18:23.393 | INFO     | __main__:main:217 - 本次运行共处理 3 条消息
+2026-03-03 20:18:23.393 | INFO     | __main__:main:218 - ============================================================
+2026-03-03 20:18:37.142 | INFO     | __main__:main:80 - ============================================================
+2026-03-03 20:18:37.142 | INFO     | __main__:main:81 - 微信表格自动化处理工具启动
+2026-03-03 20:18:37.142 | INFO     | __main__:main:82 - ============================================================
+2026-03-03 20:18:37.142 | INFO     | __main__:load_config:23 - ✓ 配置文件加载成功
+2026-03-03 20:18:37.147 | INFO     | src.config_validator:validate:32 - 开始验证配置文件...
+2026-03-03 20:18:37.147 | INFO     | src.config_validator:validate:56 - ✓ 本地模式配置有效: data/temp_images
+2026-03-03 20:18:37.147 | INFO     | src.config_validator:validate:71 - ✓ 输出配置有效: data/output_excel
+2026-03-03 20:18:37.149 | INFO     | src.config_validator:validate:92 - ✓ API Key 配置有效
+2026-03-03 20:18:37.149 | INFO     | src.config_validator:validate:98 - ✓ Base URL 配置有效: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-03-03 20:18:37.149 | INFO     | src.config_validator:validate:104 - ✓ 模型名称配置有效: qwen-vl-plus
+2026-03-03 20:18:37.150 | INFO     | src.config_validator:validate:129 - ✓ 配置文件验证通过！
+2026-03-03 20:18:37.150 | INFO     | __main__:create_listener:49 - 
+【监听模式】本地文件模式（推荐）
+2026-03-03 20:18:37.151 | INFO     | __main__:create_listener:50 - 【监听目录】data/temp_images
+2026-03-03 20:18:37.152 | INFO     | __main__:create_listener:51 - 【说明】请将要处理的图片放到此目录
+2026-03-03 20:18:37.152 | INFO     | src.wechat_listener:__init__:50 - ✓ 本地文件监听器初始化成功
+2026-03-03 20:18:37.152 | INFO     | src.wechat_listener:__init__:51 -   监听目录: D:\acceptance_file\one\WeChat_Excel_Automator\data\temp_images
+2026-03-03 20:18:37.152 | INFO     | src.wechat_listener:__init__:52 -   说明: 请将要处理的图片放到此目录
+2026-03-03 20:18:37.154 | INFO     | src.wechat_listener:__init__:53 -   支持格式: .jpg, .jpeg, .png, .bmp, .gif, .webp, .txt
+2026-03-03 20:18:37.155 | INFO     | __main__:main:101 - 正在初始化其他模块...
+2026-03-03 20:18:38.197 | INFO     | src.llm_vision_parser:__init__:30 - ✓ 大模型客户端初始化成功: qwen-vl-plus
+2026-03-03 20:18:38.197 | INFO     | __main__:main:110 - ✓ 大模型解析模块初始化完成
+2026-03-03 20:18:38.197 | INFO     | __main__:main:116 - ✓ 图片处理模块初始化完成
+2026-03-03 20:18:38.197 | INFO     | src.excel_engine:__init__:50 - ✓ Excel 生成器初始化完成，输出目录: data/output_excel
+2026-03-03 20:18:38.197 | INFO     | __main__:main:119 - ✓ Excel 生成模块初始化完成
+2026-03-03 20:18:38.197 | INFO     | __main__:main:121 - ------------------------------------------------------------
+2026-03-03 20:18:38.197 | INFO     | __main__:main:122 - 系统初始化成功！开始监听消息...
+2026-03-03 20:18:38.197 | INFO     | __main__:main:123 - 输出目录: data/output_excel
+2026-03-03 20:18:38.197 | INFO     | __main__:main:124 - ------------------------------------------------------------
+2026-03-03 20:18:38.197 | INFO     | __main__:main:138 - 
+💡 本地文件模式提示：
+2026-03-03 20:18:38.202 | INFO     | __main__:main:139 -    请将要处理的图片文件放到: data/temp_images
+2026-03-03 20:18:38.202 | INFO     | __main__:main:140 -    支持的图片格式: .jpg, .jpeg, .png, .bmp, .gif, .webp
+2026-03-03 20:18:38.202 | INFO     | __main__:main:141 -    支持的文本格式: .txt
+2026-03-03 20:18:38.202 | INFO     | __main__:main:142 - 
+2026-03-03 20:18:38.207 | INFO     | __main__:main:153 - 
+📬 收到 3 条待处理消息
+2026-03-03 20:18:38.208 | INFO     | __main__:main:157 - 【1/3】处理来自【LocalFile】的image信息...
+2026-03-03 20:18:38.218 | INFO     | src.image_processor:preprocess_image:67 - 原始图片尺寸: 539x158
+2026-03-03 20:18:38.218 | INFO     | src.image_processor:preprocess_image:79 - 执行降噪processing...
+2026-03-03 20:18:38.231 | INFO     | src.image_processor:preprocess_image:83 - 执行对比度增强...
+2026-03-03 20:18:38.408 | INFO     | src.image_processor:preprocess_image:87 - 执行自动旋转校正...
+2026-03-03 20:18:38.421 | INFO     | src.image_processor:preprocess_image:103 - ✓ 预处理完成，临时保存至: data/temp_images/processed\temp_16b20e9716e2dd4d2be8ea753c336082.jpg
+2026-03-03 20:18:38.423 | INFO     | src.llm_vision_parser:parse_content:155 - 已加载图片: data/temp_images/processed\temp_16b20e9716e2dd4d2be8ea753c336082.jpg
+2026-03-03 20:18:38.423 | INFO     | src.llm_vision_parser:parse_content:165 - 正在调用大模型进行表格识别（第1/3次）...
+2026-03-03 20:18:42.085 | ERROR    | src.llm_vision_parser:parse_content:183 - ❌ JSON 解析失败: Extra data: line 1 column 29 (char 28)
+2026-03-03 20:18:42.085 | ERROR    | src.llm_vision_parser:parse_content:184 - 原始响应内容: ["题型", "题量", "分值", "考试时间测算"],
+  "rows": [
+    {
+      "题型": "单选题",
+      "题量": "25",
+      "分值": "25",
+      "考试时间测算": "15"
+    },
+    {
+      "题型": "判断题",
+      "题量": "15",
+      "分值": "15",
+      "考试时间测算": "10"
+    },
+    {
+      "题型": "案例分析题",
+      "题量": "2",
+      "分值": "15",
+      "考试时间测算": "20"
+    },
+    {
+      "题型": "材料分析题",
+      "题量": "3",
+      "分值": "45",
+      "考试时间测算": "75"
+    }
+  ]
+2026-03-03 20:18:42.086 | ERROR    | src.llm_vision_parser:parse_content:223 - ❌ 数据验证失败: 大模型响应不是有效的JSON格式
+2026-03-03 20:18:42.086 | WARNING  | __main__:main:204 - ⚠ 解析失败，跳过该消息
+2026-03-03 20:18:42.087 | INFO     | __main__:main:157 - 【2/3】处理来自【LocalFile】的image信息...
+2026-03-03 20:18:42.094 | INFO     | src.image_processor:preprocess_image:67 - 原始图片尺寸: 1080x1665
+2026-03-03 20:18:42.094 | INFO     | src.image_processor:preprocess_image:79 - 执行降噪processing...
+2026-03-03 20:18:42.191 | INFO     | src.image_processor:preprocess_image:83 - 执行对比度增强...
+2026-03-03 20:18:42.210 | INFO     | src.image_processor:preprocess_image:87 - 执行自动旋转校正...
+2026-03-03 20:18:42.256 | INFO     | src.image_processor:preprocess_image:103 - ✓ 预处理完成，临时保存至: data/temp_images/processed\temp_4718805f8faa858557b4fbfb1485eb38.jpg
+2026-03-03 20:18:42.258 | INFO     | src.llm_vision_parser:parse_content:155 - 已加载图片: data/temp_images/processed\temp_4718805f8faa858557b4fbfb1485eb38.jpg
+2026-03-03 20:18:42.258 | INFO     | src.llm_vision_parser:parse_content:165 - 正在调用大模型进行表格识别（第1/3次）...
+2026-03-03 20:18:52.253 | ERROR    | src.llm_vision_parser:parse_content:183 - ❌ JSON 解析失败: Extra data: line 1 column 36 (char 35)
+2026-03-03 20:18:52.253 | ERROR    | src.llm_vision_parser:parse_content:184 - 原始响应内容: ["星期一", "星期二", "星期三", "星期四", "星期五"],
+  "rows": [
+    {
+      "星期一": "第一大节",
+      "星期二": "微积分I\n宁翠\n4-17(周)\n清远南教316",
+      "星期三": "",
+      "星期四": "体育I【瑜伽】\n许兴敏\n4-17(周)",
+      "星期五": ""
+    },
+    {
+      "星期一": "第二大节",
+      "星期二": "大学英语I\n蔡燕讲师\n4-17(周)\n清远南教418",
+      "星期三": "思想道德与法治\n吴晓丽讲师\n4-17(周)\n清远南教501",
+      "星期四": "微观经济学\n杨霞\n4-17(周)\n清远南教306",
+      "星期五": ""
+    },
+    {
+      "星期一": "M",
+      "星期二": "",
+      "星期三": "思想道德与法治\n吴晓丽讲师\n4-17(周)\n清远南教501",
+      "星期四": "微观经济学\n杨霞\
+2026-03-03 20:18:52.253 | ERROR    | src.llm_vision_parser:parse_content:223 - ❌ 数据验证失败: 大模型响应不是有效的JSON格式
+2026-03-03 20:18:52.253 | WARNING  | __main__:main:204 - ⚠ 解析失败，跳过该消息
+2026-03-03 20:18:52.253 | INFO     | __main__:main:157 - 【3/3】处理来自【LocalFile】的image信息...
+2026-03-03 20:18:52.257 | INFO     | src.image_processor:preprocess_image:67 - 原始图片尺寸: 1356x203
+2026-03-03 20:18:52.257 | INFO     | src.image_processor:preprocess_image:79 - 执行降噪processing...
+2026-03-03 20:18:52.277 | INFO     | src.image_processor:preprocess_image:83 - 执行对比度增强...
+2026-03-03 20:18:52.289 | INFO     | src.image_processor:preprocess_image:87 - 执行自动旋转校正...
+2026-03-03 20:18:52.319 | INFO     | src.image_processor:preprocess_image:103 - ✓ 预处理完成，临时保存至: data/temp_images/processed\temp_56217e648e7c2900e681a21ef8bb19a7.jpg
+2026-03-03 20:18:52.321 | INFO     | src.llm_vision_parser:parse_content:155 - 已加载图片: data/temp_images/processed\temp_56217e648e7c2900e681a21ef8bb19a7.jpg
+2026-03-03 20:18:52.321 | INFO     | src.llm_vision_parser:parse_content:165 - 正在调用大模型进行表格识别（第1/3次）...
+2026-03-03 20:19:22.336 | INFO     | __main__:main:215 - 
+============================================================
+2026-03-03 20:19:22.337 | INFO     | __main__:main:216 - 用户手动停止程序
+2026-03-03 20:19:22.337 | INFO     | __main__:main:217 - 本次运行共处理 0 条消息
+2026-03-03 20:19:22.337 | INFO     | __main__:main:218 - ============================================================
+2026-03-03 20:20:27.830 | INFO     | __main__:main:80 - ============================================================
+2026-03-03 20:20:27.830 | INFO     | __main__:main:81 - 微信表格自动化处理工具启动
+2026-03-03 20:20:27.830 | INFO     | __main__:main:82 - ============================================================
+2026-03-03 20:20:27.836 | INFO     | __main__:load_config:23 - ✓ 配置文件加载成功
+2026-03-03 20:20:27.837 | INFO     | src.config_validator:validate:32 - 开始验证配置文件...
+2026-03-03 20:20:27.837 | INFO     | src.config_validator:validate:56 - ✓ 本地模式配置有效: data/temp_images
+2026-03-03 20:20:27.837 | INFO     | src.config_validator:validate:71 - ✓ 输出配置有效: data/output_excel
+2026-03-03 20:20:27.838 | INFO     | src.config_validator:validate:92 - ✓ API Key 配置有效
+2026-03-03 20:20:27.838 | INFO     | src.config_validator:validate:98 - ✓ Base URL 配置有效: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-03-03 20:20:27.838 | INFO     | src.config_validator:validate:104 - ✓ 模型名称配置有效: qwen-vl-plus
+2026-03-03 20:20:27.838 | INFO     | src.config_validator:validate:129 - ✓ 配置文件验证通过！
+2026-03-03 20:20:27.839 | INFO     | __main__:create_listener:49 - 
+【监听模式】本地文件模式（推荐）
+2026-03-03 20:20:27.839 | INFO     | __main__:create_listener:50 - 【监听目录】data/temp_images
+2026-03-03 20:20:27.839 | INFO     | __main__:create_listener:51 - 【说明】请将要处理的图片放到此目录
+2026-03-03 20:20:27.839 | INFO     | src.wechat_listener:__init__:50 - ✓ 本地文件监听器初始化成功
+2026-03-03 20:20:27.840 | INFO     | src.wechat_listener:__init__:51 -   监听目录: D:\acceptance_file\one\WeChat_Excel_Automator\data\temp_images
+2026-03-03 20:20:27.840 | INFO     | src.wechat_listener:__init__:52 -   说明: 请将要处理的图片放到此目录
+2026-03-03 20:20:27.840 | INFO     | src.wechat_listener:__init__:53 -   支持格式: .jpg, .jpeg, .png, .bmp, .gif, .webp, .txt
+2026-03-03 20:20:27.840 | INFO     | __main__:main:101 - 正在初始化其他模块...
+2026-03-03 20:20:28.911 | INFO     | src.llm_vision_parser:__init__:30 - ✓ 大模型客户端初始化成功: qwen-vl-plus
+2026-03-03 20:20:28.912 | INFO     | __main__:main:110 - ✓ 大模型解析模块初始化完成
+2026-03-03 20:20:28.912 | INFO     | __main__:main:116 - ✓ 图片处理模块初始化完成
+2026-03-03 20:20:28.912 | INFO     | src.excel_engine:__init__:50 - ✓ Excel 生成器初始化完成，输出目录: data/output_excel
+2026-03-03 20:20:28.913 | INFO     | __main__:main:119 - ✓ Excel 生成模块初始化完成
+2026-03-03 20:20:28.913 | INFO     | __main__:main:121 - ------------------------------------------------------------
+2026-03-03 20:20:28.913 | INFO     | __main__:main:122 - 系统初始化成功！开始监听消息...
+2026-03-03 20:20:28.913 | INFO     | __main__:main:123 - 输出目录: data/output_excel
+2026-03-03 20:20:28.913 | INFO     | __main__:main:124 - ------------------------------------------------------------
+2026-03-03 20:20:28.914 | INFO     | __main__:main:138 - 
+💡 本地文件模式提示：
+2026-03-03 20:20:28.914 | INFO     | __main__:main:139 -    请将要处理的图片文件放到: data/temp_images
+2026-03-03 20:20:28.914 | INFO     | __main__:main:140 -    支持的图片格式: .jpg, .jpeg, .png, .bmp, .gif, .webp
+2026-03-03 20:20:28.914 | INFO     | __main__:main:141 -    支持的文本格式: .txt
+2026-03-03 20:20:28.915 | INFO     | __main__:main:142 - 
+2026-03-03 20:20:32.917 | INFO     | __main__:main:153 - 
+📬 收到 1 条待处理消息
+2026-03-03 20:20:32.919 | INFO     | __main__:main:157 - 【1/1】处理来自【LocalFile】的image信息...
+2026-03-03 20:20:32.925 | INFO     | src.image_processor:preprocess_image:67 - 原始图片尺寸: 1080x1665
+2026-03-03 20:20:32.925 | INFO     | src.image_processor:preprocess_image:79 - 执行降噪processing...
+2026-03-03 20:20:32.979 | INFO     | src.image_processor:preprocess_image:83 - 执行对比度增强...
+2026-03-03 20:20:33.168 | INFO     | src.image_processor:preprocess_image:87 - 执行自动旋转校正...
+2026-03-03 20:20:33.213 | INFO     | src.image_processor:preprocess_image:103 - ✓ 预处理完成，临时保存至: data/temp_images/processed\temp_4718805f8faa858557b4fbfb1485eb38.jpg
+2026-03-03 20:20:33.217 | INFO     | src.llm_vision_parser:parse_content:155 - 已加载图片: data/temp_images/processed\temp_4718805f8faa858557b4fbfb1485eb38.jpg
+2026-03-03 20:20:33.217 | INFO     | src.llm_vision_parser:parse_content:165 - 正在调用大模型进行表格识别（第1/3次）...
+2026-03-03 20:20:45.520 | ERROR    | src.llm_vision_parser:parse_content:183 - ❌ JSON 解析失败: Extra data: line 1 column 40 (char 39)
+2026-03-03 20:20:45.520 | ERROR    | src.llm_vision_parser:parse_content:184 - 原始响应内容: ["", "星期一", "星期二", "星期三", "星期四", "星期五"],
+  "rows": [
+    {
+      "": "第一大节",
+      "星期一": "",
+      "星期二": "微积分I\n宁翠\n4-17(周)\n清远南教316",
+      "星期三": "",
+      "星期四": "体育I【瑜伽】\n许兴敏\n4-17(周)",
+      "星期五": ""
+    },
+    {
+      "": "第二大节",
+      "星期一": "",
+      "星期二": "大学英语I\n蔡燕讲师\n4-17(周)\n清远南教418",
+      "星期三": "思想道德与法治\n吴晓丽讲师\n4-17(周)\n清远南教501",
+      "星期四": "微观经济学\n杨霞\n4-17(周)\n清远南教306",
+      "星期五": ""
+    },
+    {
+      "": "M",
+      "星期一": "",
+      "星期二": "",
+      "星期三": "思想道德与法治\n吴晓丽讲
+2026-03-03 20:20:45.520 | ERROR    | src.llm_vision_parser:parse_content:223 - ❌ 数据验证失败: 大模型响应不是有效的JSON格式
+2026-03-03 20:20:45.520 | WARNING  | __main__:main:204 - ⚠ 解析失败，跳过该消息
+2026-03-03 21:49:44.371 | INFO     | __main__:main:215 - 
+============================================================
+2026-03-03 21:49:44.371 | INFO     | __main__:main:216 - 用户手动停止程序
+2026-03-03 21:49:44.371 | INFO     | __main__:main:217 - 本次运行共处理 0 条消息
+2026-03-03 21:49:44.371 | INFO     | __main__:main:218 - ============================================================
+2026-03-03 22:18:50.949 | INFO     | __main__:<module>:220 - 
+============================================================
+2026-03-03 22:18:50.949 | INFO     | __main__:<module>:221 - 🚀 开始测试动态列名功能
+2026-03-03 22:18:50.949 | INFO     | __main__:<module>:222 - ============================================================
+2026-03-03 22:18:50.949 | INFO     | __main__:test_scenario_1:31 - 
+============================================================
+2026-03-03 22:18:50.949 | INFO     | __main__:test_scenario_1:32 - 🧪 测试场景 1：有列名的表格
+2026-03-03 22:18:50.949 | INFO     | __main__:test_scenario_1:33 - ============================================================
+2026-03-03 22:18:50.949 | INFO     | __main__:test_scenario_1:48 - 📊 LLM 识别结果:
+2026-03-03 22:18:50.949 | INFO     | __main__:test_scenario_1:49 -   - 表格: True
+2026-03-03 22:18:50.949 | INFO     | __main__:test_scenario_1:50 -   - 列名: ['题型', '题量', '分值', '考试时间测算']
+2026-03-03 22:18:50.955 | INFO     | __main__:test_scenario_1:51 -   - 行数: 3
+2026-03-03 22:18:50.955 | INFO     | __main__:test_scenario_1:54 - 
+[步骤 1] 检测表格结构...
+2026-03-03 22:18:50.955 | INFO     | src.table_structure_detector:detect_structure:69 - ✓ 表格结构检测完成
+2026-03-03 22:18:50.955 | INFO     | src.table_structure_detector:detect_structure:70 -   - 有表格: True
+2026-03-03 22:18:50.955 | INFO     | src.table_structure_detector:detect_structure:71 -   - 有列名: True
+2026-03-03 22:18:50.955 | INFO     | src.table_structure_detector:detect_structure:73 -   - 列名: ['题型', '题量', '分值', '考试时间测算']
+2026-03-03 22:18:50.955 | INFO     | src.table_structure_detector:detect_structure:74 -   - 数据行数: 3
+2026-03-03 22:18:50.955 | INFO     | src.table_structure_detector:detect_structure:75 -   - 数据格式: object
+2026-03-03 22:18:50.955 | INFO     | __main__:test_scenario_1:59 - ✓ 表格结构检测成功
+2026-03-03 22:18:50.955 | INFO     | __main__:test_scenario_1:62 - 
+[步骤 2] 规范化数据...
+2026-03-03 22:18:50.955 | INFO     | __main__:test_scenario_1:65 - ✓ 数据规范化成功，3 条记录
+2026-03-03 22:18:50.955 | INFO     | __main__:test_scenario_1:68 - 
+[步骤 3] 清洗数据...
+2026-03-03 22:18:50.955 | INFO     | src.data_validator:validate_and_clean:56 - 📋 开始数据清洗，列名: ['题型', '题量', '分值', '考试时间测算']
+2026-03-03 22:18:50.960 | INFO     | src.data_validator:validate_and_clean:130 - ========== 数据清洗统计 ==========
+2026-03-03 22:18:50.964 | INFO     | src.data_validator:validate_and_clean:131 -   总记录数: 3
+2026-03-03 22:18:50.964 | INFO     | src.data_validator:validate_and_clean:132 -   有效记录数: 3
+2026-03-03 22:18:50.964 | INFO     | src.data_validator:validate_and_clean:133 -   跳过记录数: 0
+2026-03-03 22:18:50.965 | INFO     | src.data_validator:validate_and_clean:135 -   清洗完成率: 3/3 (100%)
+2026-03-03 22:18:50.965 | INFO     | src.data_validator:validate_and_clean:136 - ================================
+2026-03-03 22:18:50.965 | INFO     | __main__:test_scenario_1:75 - ✓ 数据清洗成功，3 条有效记录
+2026-03-03 22:18:50.965 | INFO     | __main__:test_scenario_1:78 - 
+[步骤 4] 生成 Excel...
+2026-03-03 22:18:50.966 | INFO     | src.excel_engine:__init__:50 - ✓ Excel 生成器初始化完成，输出目录: data/output_excel
+2026-03-03 22:18:50.966 | INFO     | src.excel_engine:generate:91 - ✓ 列名确定: ['题型', '题量', '分值', '考试时间测算']
+2026-03-03 22:18:50.969 | INFO     | src.excel_engine:generate:104 - ✓ 已创建 DataFrame: 3 行 x 4 列
+2026-03-03 22:18:50.988 | INFO     | src.excel_engine:generate:117 - ✓ Excel 文件已保存: data/output_excel\表格_测试场景1_有列名_20260303_221850.xlsx
+2026-03-03 22:18:51.007 | INFO     | src.excel_engine:generate:122 - ✓ Excel 格式化完成
+2026-03-03 22:18:51.011 | INFO     | src.excel_engine:generate:127 - ========== Excel 生成统计 ==========
+2026-03-03 22:18:51.012 | INFO     | src.excel_engine:generate:128 -   记录数: 3
+2026-03-03 22:18:51.012 | INFO     | src.excel_engine:generate:129 -   字段数: 4
+2026-03-03 22:18:51.014 | INFO     | src.excel_engine:generate:130 -   文件大小: 5.1 KB
+2026-03-03 22:18:51.014 | INFO     | src.excel_engine:generate:131 -   保存路径: data/output_excel\表格_测试场景1_有列名_20260303_221850.xlsx
+2026-03-03 22:18:51.014 | INFO     | src.excel_engine:generate:132 - ==================================
+2026-03-03 22:18:51.014 | INFO     | __main__:test_scenario_1:87 - ✓ Excel 生成成功: data/output_excel\表格_测试场景1_有列名_20260303_221850.xlsx
+2026-03-03 22:18:51.014 | INFO     | __main__:test_scenario_2:94 - 
+============================================================
+2026-03-03 22:18:51.014 | INFO     | __main__:test_scenario_2:95 - 🧪 测试场景 2：无列名的表格
+2026-03-03 22:18:51.017 | INFO     | __main__:test_scenario_2:96 - ============================================================
+2026-03-03 22:18:51.017 | INFO     | __main__:test_scenario_2:111 - 📊 LLM 识别结果:
+2026-03-03 22:18:51.017 | INFO     | __main__:test_scenario_2:112 -   - 表格: True
+2026-03-03 22:18:51.017 | INFO     | __main__:test_scenario_2:113 -   - 有列名: False
+2026-03-03 22:18:51.017 | INFO     | __main__:test_scenario_2:114 -   - 行数: 3
+2026-03-03 22:18:51.017 | INFO     | __main__:test_scenario_2:117 - 
+[步骤 1] 检测表格结构...
+2026-03-03 22:18:51.017 | INFO     | src.table_structure_detector:detect_structure:69 - ✓ 表格结构检测完成
+2026-03-03 22:18:51.017 | INFO     | src.table_structure_detector:detect_structure:70 -   - 有表格: True
+2026-03-03 22:18:51.017 | INFO     | src.table_structure_detector:detect_structure:71 -   - 有列名: False
+2026-03-03 22:18:51.017 | INFO     | src.table_structure_detector:detect_structure:74 -   - 数据行数: 3
+2026-03-03 22:18:51.017 | INFO     | src.table_structure_detector:detect_structure:75 -   - 数据格式: array
+2026-03-03 22:18:51.017 | INFO     | __main__:test_scenario_2:122 - ✓ 表格结构检测成功（识别为无列名表格）
+2026-03-03 22:18:51.017 | INFO     | __main__:test_scenario_2:125 - 
+[步骤 2] 规范化数据...
+2026-03-03 22:18:51.017 | INFO     | __main__:test_scenario_2:129 - ✓ 数据规范化成功，3 条记录
+2026-03-03 22:18:51.017 | INFO     | __main__:test_scenario_2:130 -   自动生成的列名: ['列1', '列2', '列3']
+2026-03-03 22:18:51.017 | INFO     | __main__:test_scenario_2:133 - 
+[步骤 3] 清洗数据...
+2026-03-03 22:18:51.017 | INFO     | src.data_validator:validate_and_clean:56 - 📋 开始数据清洗，列名: ['列1', '列2', '列3']
+2026-03-03 22:18:51.022 | INFO     | src.data_validator:validate_and_clean:130 - ========== 数据清洗统计 ==========
+2026-03-03 22:18:51.022 | INFO     | src.data_validator:validate_and_clean:131 -   总记录数: 3
+2026-03-03 22:18:51.022 | INFO     | src.data_validator:validate_and_clean:132 -   有效记录数: 3
+2026-03-03 22:18:51.022 | INFO     | src.data_validator:validate_and_clean:133 -   跳过记录数: 0
+2026-03-03 22:18:51.022 | INFO     | src.data_validator:validate_and_clean:135 -   清洗完成率: 3/3 (100%)
+2026-03-03 22:18:51.022 | INFO     | src.data_validator:validate_and_clean:136 - ================================
+2026-03-03 22:18:51.022 | INFO     | __main__:test_scenario_2:140 - ✓ 数据清洗成功，3 条有效记录
+2026-03-03 22:18:51.022 | INFO     | __main__:test_scenario_2:143 - 
+[步骤 4] 生成 Excel...
+2026-03-03 22:18:51.022 | INFO     | src.excel_engine:__init__:50 - ✓ Excel 生成器初始化完成，输出目录: data/output_excel
+2026-03-03 22:18:51.022 | INFO     | src.excel_engine:generate:91 - ✓ 列名确定: ['列1', '列2', '列3']
+2026-03-03 22:18:51.027 | INFO     | src.excel_engine:generate:104 - ✓ 已创建 DataFrame: 3 行 x 3 列
+2026-03-03 22:18:51.042 | INFO     | src.excel_engine:generate:117 - ✓ Excel 文件已保存: data/output_excel\表格_测试场景2_无列名_20260303_221851.xlsx
+2026-03-03 22:18:51.058 | INFO     | src.excel_engine:generate:122 - ✓ Excel 格式化完成
+2026-03-03 22:18:51.058 | INFO     | src.excel_engine:generate:127 - ========== Excel 生成统计 ==========
+2026-03-03 22:18:51.058 | INFO     | src.excel_engine:generate:128 -   记录数: 3
+2026-03-03 22:18:51.059 | INFO     | src.excel_engine:generate:129 -   字段数: 3
+2026-03-03 22:18:51.059 | INFO     | src.excel_engine:generate:130 -   文件大小: 5.1 KB
+2026-03-03 22:18:51.059 | INFO     | src.excel_engine:generate:131 -   保存路径: data/output_excel\表格_测试场景2_无列名_20260303_221851.xlsx
+2026-03-03 22:18:51.060 | INFO     | src.excel_engine:generate:132 - ==================================
+2026-03-03 22:18:51.060 | INFO     | __main__:test_scenario_2:152 - ✓ Excel 生成成功: data/output_excel\表格_测试场景2_无列名_20260303_221851.xlsx
+2026-03-03 22:18:51.060 | INFO     | __main__:test_scenario_3:159 - 
+============================================================
+2026-03-03 22:18:51.060 | INFO     | __main__:test_scenario_3:160 - 🧪 测试场景 3：产品类表格（不同列名）
+2026-03-03 22:18:51.061 | INFO     | __main__:test_scenario_3:161 - ============================================================
+2026-03-03 22:18:51.061 | INFO     | __main__:test_scenario_3:176 - 📊 LLM 识别结果:
+2026-03-03 22:18:51.061 | INFO     | __main__:test_scenario_3:177 -   - 表格: True
+2026-03-03 22:18:51.062 | INFO     | __main__:test_scenario_3:178 -   - 列名: ['品名', '规格', '材质', '产地', '仓库', '价格']
+2026-03-03 22:18:51.062 | INFO     | __main__:test_scenario_3:179 -   - 行数: 3
+2026-03-03 22:18:51.062 | INFO     | __main__:test_scenario_3:182 - 
+[步骤 1] 检测表格结构...
+2026-03-03 22:18:51.063 | INFO     | src.table_structure_detector:detect_structure:69 - ✓ 表格结构检测完成
+2026-03-03 22:18:51.063 | INFO     | src.table_structure_detector:detect_structure:70 -   - 有表格: True
+2026-03-03 22:18:51.063 | INFO     | src.table_structure_detector:detect_structure:71 -   - 有列名: True
+2026-03-03 22:18:51.063 | INFO     | src.table_structure_detector:detect_structure:73 -   - 列名: ['品名', '规格', '材质', '产地', '仓库', '价格']
+2026-03-03 22:18:51.064 | INFO     | src.table_structure_detector:detect_structure:74 -   - 数据行数: 3
+2026-03-03 22:18:51.064 | INFO     | src.table_structure_detector:detect_structure:75 -   - 数据格式: object
+2026-03-03 22:18:51.064 | INFO     | __main__:test_scenario_3:186 - ✓ 表格结构检测成功
+2026-03-03 22:18:51.065 | INFO     | __main__:test_scenario_3:189 - 
+[步骤 2] 规范化数据...
+2026-03-03 22:18:51.065 | INFO     | __main__:test_scenario_3:192 - ✓ 数据规范化成功，3 条记录
+2026-03-03 22:18:51.065 | INFO     | __main__:test_scenario_3:195 - 
+[步骤 3] 清洗数据...
+2026-03-03 22:18:51.065 | INFO     | src.data_validator:validate_and_clean:56 - 📋 开始数据清洗，列名: ['品名', '规格', '材质', '产地', '仓库', '价格']
+2026-03-03 22:18:51.066 | INFO     | src.data_validator:validate_and_clean:130 - ========== 数据清洗统计 ==========
+2026-03-03 22:18:51.067 | INFO     | src.data_validator:validate_and_clean:131 -   总记录数: 3
+2026-03-03 22:18:51.067 | INFO     | src.data_validator:validate_and_clean:132 -   有效记录数: 3
+2026-03-03 22:18:51.067 | INFO     | src.data_validator:validate_and_clean:133 -   跳过记录数: 0
+2026-03-03 22:18:51.067 | INFO     | src.data_validator:validate_and_clean:135 -   清洗完成率: 3/3 (100%)
+2026-03-03 22:18:51.068 | INFO     | src.data_validator:validate_and_clean:136 - ================================
+2026-03-03 22:18:51.068 | INFO     | __main__:test_scenario_3:202 - ✓ 数据清洗成功，3 条有效记录
+2026-03-03 22:18:51.069 | INFO     | __main__:test_scenario_3:205 - 
+[步骤 4] 生成 Excel...
+2026-03-03 22:18:51.069 | INFO     | src.excel_engine:__init__:50 - ✓ Excel 生成器初始化完成，输出目录: data/output_excel
+2026-03-03 22:18:51.070 | INFO     | src.excel_engine:generate:91 - ✓ 列名确定: ['品名', '规格', '材质', '产地', '仓库', '价格']
+2026-03-03 22:18:51.072 | INFO     | src.excel_engine:generate:104 - ✓ 已创建 DataFrame: 3 行 x 6 列
+2026-03-03 22:18:51.087 | INFO     | src.excel_engine:generate:117 - ✓ Excel 文件已保存: data/output_excel\表格_测试场景3_产品类_20260303_221851.xlsx
+2026-03-03 22:18:51.121 | INFO     | src.excel_engine:generate:122 - ✓ Excel 格式化完成
+2026-03-03 22:18:51.121 | INFO     | src.excel_engine:generate:127 - ========== Excel 生成统计 ==========
+2026-03-03 22:18:51.122 | INFO     | src.excel_engine:generate:128 -   记录数: 3
+2026-03-03 22:18:51.122 | INFO     | src.excel_engine:generate:129 -   字段数: 6
+2026-03-03 22:18:51.122 | INFO     | src.excel_engine:generate:130 -   文件大小: 5.2 KB
+2026-03-03 22:18:51.123 | INFO     | src.excel_engine:generate:131 -   保存路径: data/output_excel\表格_测试场景3_产品类_20260303_221851.xlsx
+2026-03-03 22:18:51.123 | INFO     | src.excel_engine:generate:132 - ==================================
+2026-03-03 22:18:51.123 | INFO     | __main__:test_scenario_3:214 - ✓ Excel 生成成功: data/output_excel\表格_测试场景3_产品类_20260303_221851.xlsx
+2026-03-03 22:18:51.123 | INFO     | __main__:<module>:230 - 
+============================================================
+2026-03-03 22:18:51.123 | INFO     | __main__:<module>:231 - ✅ 所有测试通过！
+2026-03-03 22:18:51.123 | INFO     | __main__:<module>:232 - ============================================================
+2026-03-03 22:18:51.123 | INFO     | __main__:<module>:233 - 
+所有修改已完成且验证成功！
+2026-03-03 22:18:51.123 | INFO     | __main__:<module>:234 - 主要改进:
+2026-03-03 22:18:51.123 | INFO     | __main__:<module>:235 -   1. ✓ 支持动态列名识别
+2026-03-03 22:18:51.123 | INFO     | __main__:<module>:236 -   2. ✓ 支持无列名表格处理
+2026-03-03 22:18:51.123 | INFO     | __main__:<module>:237 -   3. ✓ 自动列名与数据对应
+2026-03-03 22:18:51.123 | INFO     | __main__:<module>:238 -   4. ✓ Excel 格式正确生成
+2026-03-03 22:19:25.517 | INFO     | __main__:test_json_parsing:19 - ============================================================
+2026-03-03 22:19:25.518 | INFO     | __main__:test_json_parsing:20 - 🧪 开始测试改进的 JSON 解析功能
+2026-03-03 22:19:25.518 | INFO     | __main__:test_json_parsing:21 - ============================================================
+2026-03-03 22:19:25.519 | INFO     | __main__:test_json_parsing:70 - 
+测试 1：标准 JSON 格式
+2026-03-03 22:19:25.519 | INFO     | __main__:test_json_parsing:71 - --------------------------------------------------
+2026-03-03 22:19:25.519 | INFO     | src.llm_vision_parser:_extract_and_parse_json:259 - ✓ JSON 解析成功（直接解析）
+2026-03-03 22:19:25.520 | INFO     | __main__:test_json_parsing:77 - ✅ 通过
+2026-03-03 22:19:25.520 | INFO     | __main__:test_json_parsing:78 -    解析结果类型: dict
+2026-03-03 22:19:25.520 | INFO     | __main__:test_json_parsing:80 -    - has_table: True
+2026-03-03 22:19:25.520 | INFO     | __main__:test_json_parsing:81 -    - columns: ['列1', '列2']...
+2026-03-03 22:19:25.521 | INFO     | __main__:test_json_parsing:70 - 
+测试 2：JSON 被 markdown 代码块包装
+2026-03-03 22:19:25.521 | INFO     | __main__:test_json_parsing:71 - --------------------------------------------------
+2026-03-03 22:19:25.521 | INFO     | src.llm_vision_parser:_extract_and_parse_json:259 - ✓ JSON 解析成功（直接解析）
+2026-03-03 22:19:25.522 | INFO     | __main__:test_json_parsing:77 - ✅ 通过
+2026-03-03 22:19:25.522 | INFO     | __main__:test_json_parsing:78 -    解析结果类型: dict
+2026-03-03 22:19:25.522 | INFO     | __main__:test_json_parsing:80 -    - has_table: True
+2026-03-03 22:19:25.522 | INFO     | __main__:test_json_parsing:81 -    - columns: ['列1', '列2']...
+2026-03-03 22:19:25.523 | INFO     | __main__:test_json_parsing:70 - 
+测试 3：只有开始的代码块标记
+2026-03-03 22:19:25.523 | INFO     | __main__:test_json_parsing:71 - --------------------------------------------------
+2026-03-03 22:19:25.523 | INFO     | src.llm_vision_parser:_extract_and_parse_json:259 - ✓ JSON 解析成功（直接解析）
+2026-03-03 22:19:25.524 | INFO     | __main__:test_json_parsing:77 - ✅ 通过
+2026-03-03 22:19:25.524 | INFO     | __main__:test_json_parsing:78 -    解析结果类型: dict
+2026-03-03 22:19:25.524 | INFO     | __main__:test_json_parsing:80 -    - has_table: True
+2026-03-03 22:19:25.525 | INFO     | __main__:test_json_parsing:81 -    - columns: ['星期一', '星期二']...
+2026-03-03 22:19:25.525 | INFO     | __main__:test_json_parsing:70 - 
+测试 4：JSON包含特殊字符（中文、空格）
+2026-03-03 22:19:25.525 | INFO     | __main__:test_json_parsing:71 - --------------------------------------------------
+2026-03-03 22:19:25.526 | INFO     | src.llm_vision_parser:_extract_and_parse_json:259 - ✓ JSON 解析成功（直接解析）
+2026-03-03 22:19:25.526 | INFO     | __main__:test_json_parsing:77 - ✅ 通过
+2026-03-03 22:19:25.526 | INFO     | __main__:test_json_parsing:78 -    解析结果类型: dict
+2026-03-03 22:19:25.526 | INFO     | __main__:test_json_parsing:80 -    - has_table: True
+2026-03-03 22:19:25.527 | INFO     | __main__:test_json_parsing:81 -    - columns: ['题型', '题量', '分值']...
+2026-03-03 22:19:25.527 | INFO     | __main__:test_json_parsing:70 - 
+测试 5：空 JSON（用于 has_table=false）
+2026-03-03 22:19:25.527 | INFO     | __main__:test_json_parsing:71 - --------------------------------------------------
+2026-03-03 22:19:25.528 | INFO     | src.llm_vision_parser:_extract_and_parse_json:259 - ✓ JSON 解析成功（直接解析）
+2026-03-03 22:19:25.528 | INFO     | __main__:test_json_parsing:77 - ✅ 通过
+2026-03-03 22:19:25.528 | INFO     | __main__:test_json_parsing:78 -    解析结果类型: dict
+2026-03-03 22:19:25.528 | INFO     | __main__:test_json_parsing:80 -    - has_table: False
+2026-03-03 22:19:25.529 | INFO     | __main__:test_json_parsing:81 -    - columns: []...
+2026-03-03 22:19:25.529 | INFO     | __main__:test_json_parsing:70 - 
+测试 6：JSON 前后有多余文字（应被提取）
+2026-03-03 22:19:25.529 | INFO     | __main__:test_json_parsing:71 - --------------------------------------------------
+2026-03-03 22:19:25.530 | INFO     | src.llm_vision_parser:_extract_and_parse_json:275 - ✓ JSON 解析成功（精确提取）
+2026-03-03 22:19:25.530 | INFO     | __main__:test_json_parsing:77 - ✅ 通过
+2026-03-03 22:19:25.530 | INFO     | __main__:test_json_parsing:78 -    解析结果类型: dict
+2026-03-03 22:19:25.531 | INFO     | __main__:test_json_parsing:80 -    - has_table: True
+2026-03-03 22:19:25.531 | INFO     | __main__:test_json_parsing:81 -    - columns: ['列1']...
+2026-03-03 22:19:25.531 | INFO     | __main__:test_json_parsing:70 - 
+测试 7：不闭合的 JSON（缺少大括号）
+2026-03-03 22:19:25.532 | INFO     | __main__:test_json_parsing:71 - --------------------------------------------------
+2026-03-03 22:19:25.533 | INFO     | src.llm_vision_parser:_extract_and_parse_json:285 - ✓ JSON 解析成功（修复格式后）
+2026-03-03 22:19:25.533 | INFO     | __main__:test_json_parsing:77 - ✅ 通过
+2026-03-03 22:19:25.533 | INFO     | __main__:test_json_parsing:78 -    解析结果类型: dict
+2026-03-03 22:19:25.533 | INFO     | __main__:test_json_parsing:80 -    - has_table: True
+2026-03-03 22:19:25.534 | INFO     | __main__:test_json_parsing:81 -    - columns: ['列1', '列2']...
+2026-03-03 22:19:25.534 | INFO     | __main__:test_json_parsing:70 - 
+测试 8：不闭合的数组
+2026-03-03 22:19:25.534 | INFO     | __main__:test_json_parsing:71 - --------------------------------------------------
+2026-03-03 22:19:25.535 | INFO     | src.llm_vision_parser:_extract_and_parse_json:259 - ✓ JSON 解析成功（直接解析）
+2026-03-03 22:19:25.535 | INFO     | __main__:test_json_parsing:77 - ✅ 通过
+2026-03-03 22:19:25.535 | INFO     | __main__:test_json_parsing:78 -    解析结果类型: dict
+2026-03-03 22:19:25.535 | INFO     | __main__:test_json_parsing:80 -    - has_table: True
+2026-03-03 22:19:25.536 | INFO     | __main__:test_json_parsing:81 -    - columns: ['列1', '列2', '列3']...
+2026-03-03 22:19:25.536 | INFO     | __main__:test_json_parsing:97 - 
+============================================================
+2026-03-03 22:19:25.536 | INFO     | __main__:test_json_parsing:98 - 测试完成: 8 通过, 0 失败
+2026-03-03 22:19:25.537 | INFO     | __main__:test_json_parsing:99 - ============================================================
+2026-03-03 22:23:20.926 | INFO     | __main__:main:63 - ============================================================
+2026-03-03 22:23:20.928 | INFO     | __main__:main:64 - 微信表格自动化处理工具启动
+2026-03-03 22:23:20.930 | INFO     | __main__:main:65 - ============================================================
+2026-03-03 22:23:20.933 | INFO     | __main__:load_config:24 - ✓ 配置文件加载成功
+2026-03-03 22:23:20.933 | INFO     | src.config_validator:validate:32 - 开始验证配置文件...
+2026-03-03 22:23:20.934 | INFO     | src.config_validator:validate:56 - ✓ 本地模式配置有效: data/temp_images
+2026-03-03 22:23:20.934 | INFO     | src.config_validator:validate:71 - ✓ 输出配置有效: data/output_excel
+2026-03-03 22:23:20.936 | INFO     | src.config_validator:validate:92 - ✓ API Key 配置有效
+2026-03-03 22:23:20.937 | INFO     | src.config_validator:validate:98 - ✓ Base URL 配置有效: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-03-03 22:23:20.937 | INFO     | src.config_validator:validate:104 - ✓ 模型名称配置有效: qwen-vl-plus
+2026-03-03 22:23:20.938 | INFO     | src.config_validator:validate:129 - ✓ 配置文件验证通过！
+2026-03-03 22:23:20.938 | INFO     | __main__:create_listener:50 - 
+【监听模式】本地文件模式（推荐）
+2026-03-03 22:23:20.938 | INFO     | __main__:create_listener:51 - 【监听目录】data/temp_images
+2026-03-03 22:23:20.939 | INFO     | __main__:create_listener:52 - 【说明】请将要处理的图片放到此目录
+2026-03-03 22:23:20.939 | INFO     | src.wechat_listener:__init__:50 - ✓ 本地文件监听器初始化成功
+2026-03-03 22:23:20.939 | INFO     | src.wechat_listener:__init__:51 -   监听目录: D:\acceptance_file\one\WeChat_Excel_Automator\data\temp_images
+2026-03-03 22:23:20.939 | INFO     | src.wechat_listener:__init__:52 -   说明: 请将要处理的图片放到此目录
+2026-03-03 22:23:20.940 | INFO     | src.wechat_listener:__init__:53 -   支持格式: .jpg, .jpeg, .png, .bmp, .gif, .webp, .txt
+2026-03-03 22:23:20.940 | INFO     | __main__:main:84 - 正在初始化其他模块...
+2026-03-03 22:23:22.181 | INFO     | src.llm_vision_parser:__init__:74 - ✓ LLM 解析器已初始化: qwen-vl-plus
+2026-03-03 22:23:22.181 | INFO     | __main__:main:93 - ✓ 大模型解析模块初始化完成
+2026-03-03 22:23:22.186 | INFO     | __main__:main:99 - ✓ 图片处理模块初始化完成
+2026-03-03 22:23:22.186 | INFO     | src.excel_engine:__init__:50 - ✓ Excel 生成器初始化完成，输出目录: data/output_excel
+2026-03-03 22:23:22.187 | INFO     | __main__:main:102 - ✓ Excel 生成模块初始化完成
+2026-03-03 22:23:22.187 | INFO     | __main__:main:104 - ------------------------------------------------------------
+2026-03-03 22:23:22.187 | INFO     | __main__:main:105 - 系统初始化成功！开始监听消息...
+2026-03-03 22:23:22.187 | INFO     | __main__:main:106 - 输出目录: data/output_excel
+2026-03-03 22:23:22.187 | INFO     | __main__:main:107 - ------------------------------------------------------------
+2026-03-03 22:23:22.187 | INFO     | __main__:main:120 - 
+💡 本地文件模式提示：
+2026-03-03 22:23:22.187 | INFO     | __main__:main:121 -    请将要处理的图片文件放到: data/temp_images
+2026-03-03 22:23:22.187 | INFO     | __main__:main:122 -    支持的图片格式: .jpg, .jpeg, .png, .bmp, .gif, .webp
+2026-03-03 22:23:22.187 | INFO     | __main__:main:123 -    支持的文本格式: .txt
+2026-03-03 22:23:22.187 | INFO     | __main__:main:124 - 
+2026-03-03 22:23:38.198 | INFO     | __main__:main:135 - 
+📬 收到 1 条待处理消息
+2026-03-03 22:23:38.199 | INFO     | __main__:main:139 - 【1/1】处理来自【LocalFile】的image信息...
+2026-03-03 22:23:38.208 | INFO     | src.image_processor:preprocess_image:67 - 原始图片尺寸: 1080x1665
+2026-03-03 22:23:38.209 | INFO     | src.image_processor:preprocess_image:79 - 执行降噪processing...
+2026-03-03 22:23:38.290 | INFO     | src.image_processor:preprocess_image:83 - 执行对比度增强...
+2026-03-03 22:23:38.487 | INFO     | src.image_processor:preprocess_image:87 - 执行自动旋转校正...
+2026-03-03 22:23:38.536 | INFO     | src.image_processor:preprocess_image:103 - ✓ 预处理完成，临时保存至: data/temp_images/processed\temp_4718805f8faa858557b4fbfb1485eb38.jpg
+2026-03-03 22:23:38.536 | INFO     | src.llm_vision_parser:_parse_image:110 - 已加载图片: data/temp_images/processed\temp_4718805f8faa858557b4fbfb1485eb38.jpg
+2026-03-03 22:23:38.536 | INFO     | src.llm_vision_parser:_parse_image:111 - 正在调用大模型进行表格识别（第1/3次）...
+2026-03-03 22:23:48.746 | INFO     | src.llm_vision_parser:_extract_and_parse_json:259 - ✓ JSON 解析成功（直接解析）
+2026-03-03 22:23:48.746 | INFO     | src.llm_vision_parser:_parse_image:148 - ✓ 大模型识别成功
+2026-03-03 22:23:48.746 | INFO     | src.table_structure_detector:detect_structure:69 - ✓ 表格结构检测完成
+2026-03-03 22:23:48.751 | INFO     | src.table_structure_detector:detect_structure:70 -   - 有表格: True
+2026-03-03 22:23:48.751 | INFO     | src.table_structure_detector:detect_structure:71 -   - 有列名: True
+2026-03-03 22:23:48.751 | INFO     | src.table_structure_detector:detect_structure:73 -   - 列名: ['', '星期一', '星期二', '星期三', '星期四', '星期五']
+2026-03-03 22:23:48.751 | INFO     | src.table_structure_detector:detect_structure:74 -   - 数据行数: 8
+2026-03-03 22:23:48.753 | INFO     | src.table_structure_detector:detect_structure:75 -   - 数据格式: object
+2026-03-03 22:23:48.753 | INFO     | src.data_validator:validate_and_clean:56 - 📋 开始数据清洗，列名: ['', '星期一', '星期二', '星期三', '星期四', '星期五']
+2026-03-03 22:23:48.758 | INFO     | src.data_validator:validate_and_clean:130 - ========== 数据清洗统计 ==========
+2026-03-03 22:23:48.758 | INFO     | src.data_validator:validate_and_clean:131 -   总记录数: 8
+2026-03-03 22:23:48.759 | INFO     | src.data_validator:validate_and_clean:132 -   有效记录数: 7
+2026-03-03 22:23:48.759 | INFO     | src.data_validator:validate_and_clean:133 -   跳过记录数: 1
+2026-03-03 22:23:48.760 | INFO     | src.data_validator:validate_and_clean:135 -   清洗完成率: 7/8 (87%)
+2026-03-03 22:23:48.760 | INFO     | src.data_validator:validate_and_clean:136 - ================================
+2026-03-03 22:23:48.760 | INFO     | __main__:main:187 - ✓ 解析成功 - 提取 7 条有效记录
+2026-03-03 22:23:48.760 | INFO     | __main__:main:188 - ✓ 识别列名: ['', '星期一', '星期二', '星期三', '星期四', '星期五']
+2026-03-03 22:23:48.760 | INFO     | src.excel_engine:generate:91 - ✓ 列名确定: ['', '星期一', '星期二', '星期三', '星期四', '星期五']
+2026-03-03 22:23:48.762 | INFO     | src.excel_engine:generate:104 - ✓ 已创建 DataFrame: 7 行 x 6 列
+2026-03-03 22:23:48.797 | INFO     | src.excel_engine:generate:117 - ✓ Excel 文件已保存: data/output_excel\表格_LocalFile_20260303_222348.xlsx
+2026-03-03 22:23:48.821 | INFO     | src.excel_engine:generate:122 - ✓ Excel 格式化完成
+2026-03-03 22:23:48.821 | INFO     | src.excel_engine:generate:127 - ========== Excel 生成统计 ==========
+2026-03-03 22:23:48.821 | INFO     | src.excel_engine:generate:128 -   记录数: 7
+2026-03-03 22:23:48.821 | INFO     | src.excel_engine:generate:129 -   字段数: 6
+2026-03-03 22:23:48.821 | INFO     | src.excel_engine:generate:130 -   文件大小: 5.6 KB
+2026-03-03 22:23:48.821 | INFO     | src.excel_engine:generate:131 -   保存路径: data/output_excel\表格_LocalFile_20260303_222348.xlsx
+2026-03-03 22:23:48.821 | INFO     | src.excel_engine:generate:132 - ==================================
+2026-03-03 22:23:48.821 | INFO     | __main__:main:198 - ✓ Excel 已保存: data/output_excel\表格_LocalFile_20260303_222348.xlsx

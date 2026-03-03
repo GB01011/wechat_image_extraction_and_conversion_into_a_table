@@ -3,11 +3,12 @@ import time
 from pathlib import Path
 from src.logger import logger
 from src.config_validator import ConfigValidator
-from src.wechat_listener import WeChatBot, LocalFileListener
+from src.wechat_listener import LocalFileListener
 from src.llm_vision_parser import LLMParser
 from src.image_processor import ImageProcessor
 from src.data_validator import DataValidator
 from src.excel_engine import ExcelGenerator
+from src.table_structure_detector import TableStructureDetector
 
 
 def load_config():
@@ -38,7 +39,7 @@ def create_listener(config):
         config: 配置字典
     
     Returns:
-        监听器实例（LocalFileListener 或 WeChatBot）
+        监听器实例（LocalFileListener）
     """
     # 获取监听模式，默认为 local（推荐）
     listen_mode = config.get('wechat', {}).get('mode', 'local').lower()
@@ -50,27 +51,9 @@ def create_listener(config):
         logger.info(f"【监听目录】{listen_dir}")
         logger.info(f"【说明】请将要处理的图片放到此目录")
         listener = LocalFileListener(watch_dir=listen_dir)
-    
-    elif listen_mode == 'wechat':
-        # 备选方案：微信直连
-        listen_list = config.get('wechat', {}).get('listen_list', [])
-        save_pic_dir = config.get('wechat', {}).get('save_pic_dir', 'data/temp_images')
-        
-        if not listen_list:
-            logger.error("❌ 微信模式下 listen_list 不能为空")
-            logger.error("请在 config/settings.yaml 中配置 listen_list")
-            raise ValueError("listen_list 配置缺失")
-        
-        logger.info(f"\n【监听模式】微信直连模式")
-        logger.info(f"【监听对象】{', '.join(listen_list)}")
-        listener = WeChatBot(
-            listen_list=listen_list,
-            save_pic_dir=save_pic_dir
-        )
-    
     else:
         logger.error(f"❌ 不支持的监听模式: {listen_mode}")
-        logger.error("支持模式: local（本地文件）, wechat（微信直连）")
+        logger.error("支持模式: local（本地文件）")
         raise ValueError(f"不支持的监听模式: {listen_mode}")
     
     return listener
@@ -108,13 +91,13 @@ def main():
             max_retries=config['llm'].get('max_retries', 3)
         )
         logger.info("✓ 大模型解析模块初始化完成")
-
+        
         image_processor = ImageProcessor(
             enable_preprocessing=config['image'].get('enable_preprocessing', True),
             save_processed=config['image'].get('save_processed_images', False)
         )
         logger.info("✓ 图片处理模块初始化完成")
-
+        
         excel_gen = ExcelGenerator(output_dir=config['output']['excel_dir'])
         logger.info("✓ Excel 生成模块初始化完成")
         
@@ -125,9 +108,8 @@ def main():
     
     except Exception as e:
         logger.error(f"❌ 模块初始化失败: {e}")
-        logger.error("请检查配置文件或 API Key 设置")
         return
-
+    
     # 4. 主循环
     error_count = 0
     max_consecutive_errors = 5
@@ -136,9 +118,9 @@ def main():
     # 如果是本地模式，给出提示
     if config.get('wechat', {}).get('mode', 'local').lower() == 'local':
         logger.info("\n💡 本地文件模式提示：")
-        logger.info(f"   请将要处理的图片文件放到: {config.get('wechat', {}).get('listen_dir', 'data/temp_images')}")
-        logger.info(f"   支持的图片格式: .jpg, .jpeg, .png, .bmp, .gif, .webp")
-        logger.info(f"   支持的文本格式: .txt")
+        logger.info(f"   请将要处理的图片文件放到: {config['wechat']['listen_dir']}")
+        logger.info("   支持的图片格式: .jpg, .jpeg, .png, .bmp, .gif, .webp")
+        logger.info("   支持的文本格式: .txt")
         logger.info("")
     
     while True:
@@ -164,7 +146,7 @@ def main():
                             # 图片预处理
                             processed_image = image_processor.preprocess_image(
                                 task["data"],
-                                output_dir=config['wechat'].get('save_pic_dir', 'data/temp_images') + "/processed"
+                                output_dir=config['wechat']['listen_dir'] + "/processed"
                             )
                             parsed_data = parser.parse_content(image_path=processed_image)
                         except Exception as e:
@@ -176,32 +158,54 @@ def main():
                         except Exception as e:
                             logger.error(f"文字处理失败: {e}")
                     
-                    # 数据验证和清洗
-                    if parsed_data:
-                        cleaned_data = DataValidator.validate_and_clean(
-                            parsed_data,
-                            enable_dedup=config['data'].get('enable_deduplication', True)
-                        )
-                        
-                        if cleaned_data:
-                            logger.info(f"✓ 解析成功 - 提取 {len(cleaned_data)} 条有效记录")
-                            
-                            # 生成 Excel
-                            excel_path = excel_gen.generate(
-                                cleaned_data,
-                                source_name=task["source"]
-                            )
-                            
-                            if excel_path:
-                                logger.info(f"✓ Excel 已保存: {excel_path}")
-                                message_count += 1
-                                error_count = 0  # 重置错误计数
-                            else:
-                                logger.warning("⚠ Excel 生成失败")
-                        else:
-                            logger.warning("⚠ 数据清洗后无有效记录")
+                    # 【新增】检测表格结构，识别动态列名
+                    if parsed_data is None:
+                        logger.warning("⚠ 解析失败（LLM 返回 None），跳过该消息")
+                    elif not parsed_data.get('has_table', False):
+                        logger.warning("⚠ 未识别到有效的表格内容")
                     else:
-                        logger.warning("⚠ 解析失败，跳过该消息")
+                        # 检测表格结构
+                        structure_result = TableStructureDetector.detect_structure(parsed_data)
+                        
+                        if structure_result is None:
+                            logger.warning("⚠ 表格结构检测失败，跳过该消息")
+                        elif not structure_result.get('has_table', False):
+                            logger.warning("⚠ 表格检测器确认无有效表格")
+                        else:
+                            # 规范化数据格式，确保所有数据都是字典格式
+                            try:
+                                normalized_data = TableStructureDetector.normalize_data(structure_result)
+                                
+                                # 数据验证和清洗（传入动态列名）
+                                cleaned_data = DataValidator.validate_and_clean(
+                                    normalized_data,
+                                    enable_dedup=config['data'].get('enable_deduplication', True),
+                                    columns=structure_result['columns'] if structure_result['columns'] else None
+                                )
+                                
+                                if cleaned_data:
+                                    logger.info(f"✓ 解析成功 - 提取 {len(cleaned_data)} 条有效记录")
+                                    logger.info(f"✓ 识别列名: {structure_result['columns']}")
+                                    
+                                    # 【关键修改】传入动态列名给 Excel 生成器
+                                    excel_path = excel_gen.generate(
+                                        cleaned_data,
+                                        source_name=task["source"],
+                                        columns=structure_result['columns'] if structure_result['columns'] else None
+                                    )
+                                    
+                                    if excel_path:
+                                        logger.info(f"✓ Excel 已保存: {excel_path}")
+                                        message_count += 1
+                                        error_count = 0  # 重置错误计数
+                                    else:
+                                        logger.warning("⚠ Excel 生成失败")
+                                else:
+                                    logger.warning("⚠ 数据清洗后无有效记录")
+                            except Exception as e:
+                                logger.error(f"❌ 数据处理失败: {e}")
+                                import traceback
+                                logger.error(traceback.format_exc())
                 
                 except Exception as e:
                     logger.error(f"❌ 处理消息时发生异常: {e}")

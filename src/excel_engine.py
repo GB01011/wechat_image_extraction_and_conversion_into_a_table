@@ -3,6 +3,7 @@ Excel 生成和导出模块
 
 功能：
 - 将结构化数据写入 Excel 文件
+- 支持动态列名识别
 - 自动格式化和美化
 - 支持自定义文件名和输出路径
 """
@@ -18,15 +19,12 @@ from src.logger import logger
 class ExcelGenerator:
     """Excel 文件生成和导出模块"""
     
-    # 标准字段顺序
-    COLUMNS_ORDER = ["品名", "规格", "材质", "产地", "仓库", "价格"]
-    
-    # 表头样式配置
+    # 表头样式配置（固定）
     HEADER_FILL = PatternFill(start_color="4472C4", end_color="4472C4", fill_type="solid")
     HEADER_FONT = Font(bold=True, color="FFFFFF", size=11)
     HEADER_ALIGNMENT = Alignment(horizontal="center", vertical="center", wrap_text=True)
     
-    # 数据样式配置
+    # 数据样式配置（固定）
     DATA_ALIGNMENT = Alignment(horizontal="left", vertical="center", wrap_text=True)
     DATA_BORDER = Border(
         left=Side(style='thin'),
@@ -51,20 +49,22 @@ class ExcelGenerator:
         
         logger.info(f"✓ Excel 生成器初始化完成，输出目录: {output_dir}")
     
-    def generate(self, data_list, source_name="WeChat", timestamp=None):
+    def generate(self, data_list, source_name="WeChat", timestamp=None, columns=None):
         """
-        生成 Excel 文件
+        生成 Excel 文件（支持动态列名）
         
         处理步骤：
         1. 验证数据
-        2. 创建 DataFrame
-        3. 格式化表格
-        4. 保存文件
+        2. 确定列名（动态或指定）
+        3. 创建 DataFrame
+        4. 格式化表格
+        5. 保存文件
         
         Args:
             data_list: 数据列表（包含字典）
             source_name: 数据来源名称（用于文件名）
             timestamp: 时间戳（可选，用于文件名）
+            columns: 指定的列名列表（如果为 None，则从数据中自动提取）
         
         Returns:
             生成的 Excel 文件路径，失败返回 None
@@ -79,20 +79,31 @@ class ExcelGenerator:
             return None
         
         try:
-            # 2. 创建 DataFrame
+            # 2. 确定列名
+            if columns is None:
+                # 从第一条数据自动提取列名
+                if isinstance(data_list[0], dict):
+                    columns = list(data_list[0].keys())
+                else:
+                    logger.error("❌ 无法从数据中提取列名，请提供 columns 参数")
+                    return None
+            
+            logger.info(f"✓ 列名确定: {columns}")
+            
+            # 3. 创建 DataFrame
             df = pd.DataFrame(data_list)
             
-            # 补齐缺失列
-            for col in self.COLUMNS_ORDER:
+            # 确保所有指定的列都存在
+            for col in columns:
                 if col not in df.columns:
                     df[col] = ""
             
-            # 按标准顺序排列列
-            df = df[self.COLUMNS_ORDER]
+            # 只保留指定的列，并按照指定的顺序排列
+            df = df[columns]
             
             logger.info(f"✓ 已创建 DataFrame: {len(df)} 行 x {len(df.columns)} 列")
             
-            # 3. 生成文件名
+            # 4. 生成文件名
             if not timestamp:
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             
@@ -101,18 +112,18 @@ class ExcelGenerator:
             file_name = f"表格_{source_name_clean}_{timestamp}.xlsx"
             save_path = os.path.join(self.output_dir, file_name)
             
-            # 4. 保存 Excel 文件
+            # 5. 保存 Excel 文件
             df.to_excel(save_path, index=False, sheet_name="数据")
             logger.info(f"✓ Excel 文件已保存: {save_path}")
             
-            # 5. 应用样式格式化
+            # 6. 应用样式格式化
             try:
-                self._format_excel(save_path)
+                self._format_excel(save_path, columns)
                 logger.info(f"✓ Excel 格式化完成")
             except Exception as e:
                 logger.warning(f"⚠ Excel 格式化失败（不影响数据）: {e}")
             
-            # 6. 输出统计信息
+            # 7. 输出统计信息
             logger.info(f"========== Excel 生成统计 ==========")
             logger.info(f"  记录数: {len(df)}")
             logger.info(f"  字段数: {len(df.columns)}")
@@ -129,37 +140,36 @@ class ExcelGenerator:
             return None
     
     @staticmethod
-    def _format_excel(file_path):
+    def _format_excel(file_path, columns):
         """
         对 Excel 文件进行格式化处理
-        
+
         处理内容：
-        - 设置列宽
+        - 设置列宽（动态，包括空列名处理）
         - 格式化表头
         - 格式化数据行
         - 冻结表头
         
         Args:
             file_path: Excel 文件路径
+            columns: 列名列表（用于动态设置列宽）
         """
         from openpyxl import load_workbook
         
         workbook = load_workbook(file_path)
         worksheet = workbook.active
         
-        # 1. 设置列宽
-        column_widths = {
-            "品名": 20,
-            "规格": 15,
-            "材质": 12,
-            "产地": 12,
-            "仓库": 12,
-            "价格": 15
-        }
-        
-        for col_num, column_name in enumerate(ExcelGenerator.COLUMNS_ORDER, 1):
+        # 1. 动态设置列宽
+        for col_num, column_name in enumerate(columns, 1):
             col_letter = get_column_letter(col_num)
-            width = column_widths.get(column_name, 15)
+            
+            # 处理空列名（使用默认宽度）
+            if not column_name or column_name.strip() == "":
+                width = 10  # 空列名使用默认宽度
+            else:
+                # 根据列名长度动态计算列宽，最小 12，最大 30
+                width = min(max(len(str(column_name)) + 2, 12), 30)
+            
             worksheet.column_dimensions[col_letter].width = width
         
         # 2. 格式化表头（第1行）
