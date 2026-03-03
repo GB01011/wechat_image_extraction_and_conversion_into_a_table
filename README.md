@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 微信表格自动化处理工具 - 完整使用指南
 
 ## 📋 项目概述
@@ -383,3 +384,6 @@ python -m pytest tests/ -v
 ---
 
 **祝使用愉快！** 🎉
+=======
+# wechat_image_extraction_and_conversion_into_a_table
+>>>>>>> ee2c9e12d9452ad40bcd9df7a24bf1a0eae1a356
