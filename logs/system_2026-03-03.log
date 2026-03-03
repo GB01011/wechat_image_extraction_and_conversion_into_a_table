@@ -1,0 +1,283 @@
+2026-03-03 15:25:43.786 | INFO     | src.wechat_listener:__init__:50 - ✓ 本地文件监听器初始化成功
+2026-03-03 15:25:43.787 | INFO     | src.wechat_listener:__init__:51 -   监听目录: D:\acceptance_file\one\WeChat_Excel_Automator\data\temp_images
+2026-03-03 15:25:43.789 | INFO     | src.wechat_listener:__init__:52 -   说明: 请将要处理的图片放到此目录
+2026-03-03 15:25:43.789 | INFO     | src.wechat_listener:__init__:53 -   支持格式: .jpg, .jpeg, .png, .bmp, .gif, .webp, .txt
+2026-03-03 15:32:32.367 | INFO     | __main__:main:80 - ============================================================
+2026-03-03 15:32:32.367 | INFO     | __main__:main:81 - 微信表格自动化处理工具启动
+2026-03-03 15:32:32.367 | INFO     | __main__:main:82 - ============================================================
+2026-03-03 15:32:32.376 | INFO     | __main__:load_config:23 - ✓ 配置文件加载成功
+2026-03-03 15:32:32.377 | INFO     | src.config_validator:validate:43 - 开始验证配置文件...
+2026-03-03 15:32:32.378 | INFO     | src.config_validator:validate:56 - ✓ 微信监听列表: 文件传输助手, 报价测试群
+2026-03-03 15:32:32.378 | INFO     | src.config_validator:validate:64 - ✓ 图片保存目录: data/temp_images
+2026-03-03 15:32:32.379 | INFO     | src.config_validator:validate:75 - ✓ Excel 输出目录: data/output_excel
+2026-03-03 15:32:32.380 | INFO     | src.config_validator:validate:97 - ✓ API 端点: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-03-03 15:32:32.380 | INFO     | src.config_validator:validate:104 - ✓ 模型名称: qwen-vl-plus
+2026-03-03 15:32:32.381 | INFO     | src.config_validator:validate:121 - ✓ 日志级别: INFO
+2026-03-03 15:32:32.381 | INFO     | src.config_validator:validate:126 - ✓ 图片预处理: 启用
+2026-03-03 15:32:32.382 | INFO     | src.config_validator:validate:131 - ✓ 去重功能: 启用
+2026-03-03 15:32:32.383 | INFO     | src.config_validator:validate:134 - ============================================================
+2026-03-03 15:32:32.384 | ERROR    | src.config_validator:validate:137 - ❌ 配置验证失败，发现以下错误：
+2026-03-03 15:32:32.384 | ERROR    | src.config_validator:validate:139 -   ❌ llm.api_key 仍为示例值，请替换为真实的 API Key
+2026-03-03 15:32:32.385 | ERROR    | __main__:main:89 - ❌ 配置验证失败: 配置文件验证失败，请修正上述错误
+2026-03-03 15:55:36.534 | INFO     | __main__:main:80 - ============================================================
+2026-03-03 15:55:36.539 | INFO     | __main__:main:81 - 微信表格自动化处理工具启动
+2026-03-03 15:55:36.539 | INFO     | __main__:main:82 - ============================================================
+2026-03-03 15:55:36.539 | INFO     | __main__:load_config:23 - ✓ 配置文件加载成功
+2026-03-03 15:55:36.539 | INFO     | src.config_validator:validate:43 - 开始验证配置文件...
+2026-03-03 15:55:36.539 | ERROR    | __main__:main:89 - ❌ 配置验证失败: 'NoneType' object has no attribute 'get'
+2026-03-03 16:02:43.311 | INFO     | src.wechat_listener:__init__:50 - ✓ 本地文件监听器初始化成功
+2026-03-03 16:02:43.312 | INFO     | src.wechat_listener:__init__:51 -   监听目录: D:\acceptance_file\one\WeChat_Excel_Automator\data\temp_images
+2026-03-03 16:02:43.312 | INFO     | src.wechat_listener:__init__:52 -   说明: 请将要处理的图片放到此目录
+2026-03-03 16:02:43.312 | INFO     | src.wechat_listener:__init__:53 -   支持格式: .jpg, .jpeg, .png, .bmp, .gif, .webp, .txt
+2026-03-03 16:22:31.395 | INFO     | __main__:main:80 - ============================================================
+2026-03-03 16:22:31.400 | INFO     | __main__:main:81 - 微信表格自动化处理工具启动
+2026-03-03 16:22:31.400 | INFO     | __main__:main:82 - ============================================================
+2026-03-03 16:22:31.400 | INFO     | __main__:load_config:23 - ✓ 配置文件加载成功
+2026-03-03 16:22:31.400 | INFO     | src.config_validator:validate:43 - 开始验证配置文件...
+2026-03-03 16:22:31.400 | ERROR    | __main__:main:89 - ❌ 配置验证失败: 'NoneType' object has no attribute 'get'
+2026-03-03 16:32:20.629 | INFO     | __main__:main:80 - ============================================================
+2026-03-03 16:32:20.631 | INFO     | __main__:main:81 - 微信表格自动化处理工具启动
+2026-03-03 16:32:20.631 | INFO     | __main__:main:82 - ============================================================
+2026-03-03 16:32:20.634 | INFO     | __main__:load_config:23 - ✓ 配置文件加载成功
+2026-03-03 16:32:20.634 | INFO     | src.config_validator:validate:32 - 开始验证配置文件...
+2026-03-03 16:32:20.635 | INFO     | src.config_validator:validate:56 - ✓ 本地模式配置有效: data/temp_images
+2026-03-03 16:32:20.635 | INFO     | src.config_validator:validate:71 - ✓ 输出配置有效: data/output_excel
+2026-03-03 16:32:20.635 | INFO     | src.config_validator:validate:92 - ✓ API Key 配置有效
+2026-03-03 16:32:20.636 | INFO     | src.config_validator:validate:98 - ✓ Base URL 配置有效: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-03-03 16:32:20.636 | INFO     | src.config_validator:validate:104 - ✓ 模型名称配置有效: qwen-vl-plus
+2026-03-03 16:32:20.636 | INFO     | src.config_validator:validate:129 - ✓ 配置文件验证通过！
+2026-03-03 16:32:20.636 | INFO     | __main__:create_listener:49 - 
+【监听模式】本地文件模式（推荐）
+2026-03-03 16:32:20.637 | INFO     | __main__:create_listener:50 - 【监听目录】data/temp_images
+2026-03-03 16:32:20.637 | INFO     | __main__:create_listener:51 - 【说明】请将要处理的图片放到此目录
+2026-03-03 16:32:20.637 | ERROR    | __main__:main:96 - ❌ 监听器初始化失败: LocalFileListener.__init__() got an unexpected keyword argument 'listen_dir'
+2026-03-03 16:39:00.696 | INFO     | src.config_validator:validate:32 - 开始验证配置文件...
+2026-03-03 16:39:00.697 | INFO     | src.config_validator:validate:56 - ✓ 本地模式配置有效: data/temp_images
+2026-03-03 16:39:00.697 | INFO     | src.config_validator:validate:71 - ✓ 输出配置有效: data/output_excel
+2026-03-03 16:39:00.697 | INFO     | src.config_validator:validate:92 - ✓ API Key 配置有效
+2026-03-03 16:39:00.697 | INFO     | src.config_validator:validate:98 - ✓ Base URL 配置有效: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-03-03 16:39:00.698 | INFO     | src.config_validator:validate:104 - ✓ 模型名称配置有效: qwen-vl-plus
+2026-03-03 16:39:00.698 | INFO     | src.config_validator:validate:129 - ✓ 配置文件验证通过！
+2026-03-03 16:39:00.698 | INFO     | main:create_listener:49 - 
+【监听模式】本地文件模式（推荐）
+2026-03-03 16:39:00.698 | INFO     | main:create_listener:50 - 【监听目录】data/temp_images
+2026-03-03 16:39:00.698 | INFO     | main:create_listener:51 - 【说明】请将要处理的图片放到此目录
+2026-03-03 16:40:30.151 | INFO     | src.config_validator:validate:32 - 开始验证配置文件...
+2026-03-03 16:40:30.153 | INFO     | src.config_validator:validate:56 - ✓ 本地模式配置有效: data/temp_images
+2026-03-03 16:40:30.153 | INFO     | src.config_validator:validate:71 - ✓ 输出配置有效: data/output_excel
+2026-03-03 16:40:30.153 | INFO     | src.config_validator:validate:92 - ✓ API Key 配置有效
+2026-03-03 16:40:30.154 | INFO     | src.config_validator:validate:98 - ✓ Base URL 配置有效: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-03-03 16:40:30.154 | INFO     | src.config_validator:validate:104 - ✓ 模型名称配置有效: qwen-vl-plus
+2026-03-03 16:40:30.154 | INFO     | src.config_validator:validate:129 - ✓ 配置文件验证通过！
+2026-03-03 16:40:30.156 | INFO     | main:create_listener:49 - 
+【监听模式】本地文件模式（推荐）
+2026-03-03 16:40:30.156 | INFO     | main:create_listener:50 - 【监听目录】data/temp_images
+2026-03-03 16:40:30.156 | INFO     | main:create_listener:51 - 【说明】请将要处理的图片放到此目录
+2026-03-03 16:41:18.614 | INFO     | src.config_validator:validate:32 - 开始验证配置文件...
+2026-03-03 16:41:18.617 | INFO     | src.config_validator:validate:56 - ✓ 本地模式配置有效: data/temp_images
+2026-03-03 16:41:18.617 | INFO     | src.config_validator:validate:71 - ✓ 输出配置有效: data/output_excel
+2026-03-03 16:41:18.617 | INFO     | src.config_validator:validate:92 - ✓ API Key 配置有效
+2026-03-03 16:41:18.618 | INFO     | src.config_validator:validate:98 - ✓ Base URL 配置有效: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-03-03 16:41:18.618 | INFO     | src.config_validator:validate:104 - ✓ 模型名称配置有效: qwen-vl-plus
+2026-03-03 16:41:18.618 | INFO     | src.config_validator:validate:129 - ✓ 配置文件验证通过！
+2026-03-03 16:41:18.619 | INFO     | main:create_listener:49 - 
+【监听模式】本地文件模式（推荐）
+2026-03-03 16:41:18.619 | INFO     | main:create_listener:50 - 【监听目录】data/temp_images
+2026-03-03 16:41:18.620 | INFO     | main:create_listener:51 - 【说明】请将要处理的图片放到此目录
+2026-03-03 16:54:03.946 | INFO     | src.config_validator:validate:32 - 开始验证配置文件...
+2026-03-03 16:54:03.947 | INFO     | src.config_validator:validate:56 - ✓ 本地模式配置有效: data/temp_images
+2026-03-03 16:54:03.948 | INFO     | src.config_validator:validate:71 - ✓ 输出配置有效: data/output_excel
+2026-03-03 16:54:03.948 | INFO     | src.config_validator:validate:92 - ✓ API Key 配置有效
+2026-03-03 16:54:03.948 | INFO     | src.config_validator:validate:98 - ✓ Base URL 配置有效: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-03-03 16:54:03.948 | INFO     | src.config_validator:validate:104 - ✓ 模型名称配置有效: qwen-vl-plus
+2026-03-03 16:54:03.949 | INFO     | src.config_validator:validate:129 - ✓ 配置文件验证通过！
+2026-03-03 16:54:03.949 | INFO     | main:create_listener:49 - 
+【监听模式】本地文件模式（推荐）
+2026-03-03 16:54:03.949 | INFO     | main:create_listener:50 - 【监听目录】data/temp_images
+2026-03-03 16:54:03.949 | INFO     | main:create_listener:51 - 【说明】请将要处理的图片放到此目录
+2026-03-03 16:55:47.788 | INFO     | src.config_validator:validate:32 - 开始验证配置文件...
+2026-03-03 16:55:47.789 | INFO     | src.config_validator:validate:56 - ✓ 本地模式配置有效: data/temp_images
+2026-03-03 16:55:47.789 | INFO     | src.config_validator:validate:71 - ✓ 输出配置有效: data/output_excel
+2026-03-03 16:55:47.789 | INFO     | src.config_validator:validate:92 - ✓ API Key 配置有效
+2026-03-03 16:55:47.790 | INFO     | src.config_validator:validate:98 - ✓ Base URL 配置有效: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-03-03 16:55:47.790 | INFO     | src.config_validator:validate:104 - ✓ 模型名称配置有效: qwen-vl-plus
+2026-03-03 16:55:47.790 | INFO     | src.config_validator:validate:129 - ✓ 配置文件验证通过！
+2026-03-03 16:55:47.790 | INFO     | main:create_listener:49 - 
+【监听模式】本地文件模式（推荐）
+2026-03-03 16:55:47.790 | INFO     | main:create_listener:50 - 【监听目录】data/temp_images
+2026-03-03 16:55:47.790 | INFO     | main:create_listener:51 - 【说明】请将要处理的图片放到此目录
+2026-03-03 16:55:47.790 | INFO     | src.wechat_listener:__init__:50 - ✓ 本地文件监听器初始化成功
+2026-03-03 16:55:47.791 | INFO     | src.wechat_listener:__init__:51 -   监听目录: D:\acceptance_file\one\WeChat_Excel_Automator\data\temp_images
+2026-03-03 16:55:47.791 | INFO     | src.wechat_listener:__init__:52 -   说明: 请将要处理的图片放到此目录
+2026-03-03 16:55:47.791 | INFO     | src.wechat_listener:__init__:53 -   支持格式: .jpg, .jpeg, .png, .bmp, .gif, .webp, .txt
+2026-03-03 16:56:18.441 | INFO     | src.config_validator:validate:32 - 开始验证配置文件...
+2026-03-03 16:56:18.441 | INFO     | src.config_validator:validate:56 - ✓ 本地模式配置有效: data/temp_images
+2026-03-03 16:56:18.441 | INFO     | src.config_validator:validate:71 - ✓ 输出配置有效: data/output_excel
+2026-03-03 16:56:18.444 | INFO     | src.config_validator:validate:92 - ✓ API Key 配置有效
+2026-03-03 16:56:18.444 | INFO     | src.config_validator:validate:98 - ✓ Base URL 配置有效: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-03-03 16:56:18.444 | INFO     | src.config_validator:validate:104 - ✓ 模型名称配置有效: qwen-vl-plus
+2026-03-03 16:56:18.444 | INFO     | src.config_validator:validate:129 - ✓ 配置文件验证通过！
+2026-03-03 16:56:18.444 | INFO     | main:create_listener:49 - 
+【监听模式】本地文件模式（推荐）
+2026-03-03 16:56:18.444 | INFO     | main:create_listener:50 - 【监听目录】data/temp_images
+2026-03-03 16:56:18.444 | INFO     | main:create_listener:51 - 【说明】请将要处理的图片放到此目录
+2026-03-03 16:56:18.444 | INFO     | src.wechat_listener:__init__:50 - ✓ 本地文件监听器初始化成功
+2026-03-03 16:56:18.444 | INFO     | src.wechat_listener:__init__:51 -   监听目录: D:\acceptance_file\one\WeChat_Excel_Automator\data\temp_images
+2026-03-03 16:56:18.444 | INFO     | src.wechat_listener:__init__:52 -   说明: 请将要处理的图片放到此目录
+2026-03-03 16:56:18.444 | INFO     | src.wechat_listener:__init__:53 -   支持格式: .jpg, .jpeg, .png, .bmp, .gif, .webp, .txt
+2026-03-03 17:00:10.610 | INFO     | __main__:main:80 - ============================================================
+2026-03-03 17:00:10.612 | INFO     | __main__:main:81 - 微信表格自动化处理工具启动
+2026-03-03 17:00:10.612 | INFO     | __main__:main:82 - ============================================================
+2026-03-03 17:00:10.615 | INFO     | __main__:load_config:23 - ✓ 配置文件加载成功
+2026-03-03 17:00:10.615 | INFO     | src.config_validator:validate:32 - 开始验证配置文件...
+2026-03-03 17:00:10.615 | INFO     | src.config_validator:validate:56 - ✓ 本地模式配置有效: data/temp_images
+2026-03-03 17:00:10.617 | INFO     | src.config_validator:validate:71 - ✓ 输出配置有效: data/output_excel
+2026-03-03 17:00:10.617 | INFO     | src.config_validator:validate:92 - ✓ API Key 配置有效
+2026-03-03 17:00:10.619 | INFO     | src.config_validator:validate:98 - ✓ Base URL 配置有效: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-03-03 17:00:10.619 | INFO     | src.config_validator:validate:104 - ✓ 模型名称配置有效: qwen-vl-plus
+2026-03-03 17:00:10.619 | INFO     | src.config_validator:validate:129 - ✓ 配置文件验证通过！
+2026-03-03 17:00:10.622 | INFO     | __main__:create_listener:49 - 
+【监听模式】本地文件模式（推荐）
+2026-03-03 17:00:10.622 | INFO     | __main__:create_listener:50 - 【监听目录】data/temp_images
+2026-03-03 17:00:10.623 | INFO     | __main__:create_listener:51 - 【说明】请将要处理的图片放到此目录
+2026-03-03 17:00:10.623 | INFO     | src.wechat_listener:__init__:50 - ✓ 本地文件监听器初始化成功
+2026-03-03 17:00:10.623 | INFO     | src.wechat_listener:__init__:51 -   监听目录: D:\acceptance_file\one\WeChat_Excel_Automator\data\temp_images
+2026-03-03 17:00:10.624 | INFO     | src.wechat_listener:__init__:52 -   说明: 请将要处理的图片放到此目录
+2026-03-03 17:00:10.624 | INFO     | src.wechat_listener:__init__:53 -   支持格式: .jpg, .jpeg, .png, .bmp, .gif, .webp, .txt
+2026-03-03 17:00:10.624 | INFO     | __main__:main:101 - 正在初始化其他模块...
+2026-03-03 17:00:11.800 | INFO     | src.llm_vision_parser:__init__:30 - ✓ 大模型客户端初始化成功: qwen-vl-plus
+2026-03-03 17:00:11.800 | INFO     | __main__:main:110 - ✓ 大模型解析模块初始化完成
+2026-03-03 17:00:11.800 | INFO     | __main__:main:116 - ✓ 图片处理模块初始化完成
+2026-03-03 17:00:11.800 | INFO     | src.excel_engine:__init__:52 - ✓ Excel 生成器初始化完成，输出目录: data/output_excel
+2026-03-03 17:00:11.800 | INFO     | __main__:main:119 - ✓ Excel 生成模块初始化完成
+2026-03-03 17:00:11.800 | INFO     | __main__:main:121 - ------------------------------------------------------------
+2026-03-03 17:00:11.800 | INFO     | __main__:main:122 - 系统初始化成功！开始监听消息...
+2026-03-03 17:00:11.802 | INFO     | __main__:main:123 - 输出目录: data/output_excel
+2026-03-03 17:00:11.802 | INFO     | __main__:main:124 - ------------------------------------------------------------
+2026-03-03 17:00:11.802 | INFO     | __main__:main:138 - 
+💡 本地文件模式提示：
+2026-03-03 17:00:11.802 | INFO     | __main__:main:139 -    请将要处理的图片文件放到: data/temp_images
+2026-03-03 17:00:11.802 | INFO     | __main__:main:140 -    支持的图片格式: .jpg, .jpeg, .png, .bmp, .gif, .webp
+2026-03-03 17:00:11.802 | INFO     | __main__:main:141 -    支持的文本格式: .txt
+2026-03-03 17:00:11.802 | INFO     | __main__:main:142 - 
+2026-03-03 17:08:10.266 | INFO     | __main__:main:215 - 
+============================================================
+2026-03-03 17:08:10.266 | INFO     | __main__:main:216 - 用户手动停止程序
+2026-03-03 17:08:10.268 | INFO     | __main__:main:217 - 本次运行共处理 0 条消息
+2026-03-03 17:08:10.268 | INFO     | __main__:main:218 - ============================================================
+2026-03-03 17:08:26.039 | INFO     | __main__:main:80 - ============================================================
+2026-03-03 17:08:26.039 | INFO     | __main__:main:81 - 微信表格自动化处理工具启动
+2026-03-03 17:08:26.044 | INFO     | __main__:main:82 - ============================================================
+2026-03-03 17:08:26.044 | INFO     | __main__:load_config:23 - ✓ 配置文件加载成功
+2026-03-03 17:08:26.044 | INFO     | src.config_validator:validate:32 - 开始验证配置文件...
+2026-03-03 17:08:26.044 | INFO     | src.config_validator:validate:56 - ✓ 本地模式配置有效: data/temp_images
+2026-03-03 17:08:26.044 | INFO     | src.config_validator:validate:71 - ✓ 输出配置有效: data/output_excel
+2026-03-03 17:08:26.044 | INFO     | src.config_validator:validate:92 - ✓ API Key 配置有效
+2026-03-03 17:08:26.044 | INFO     | src.config_validator:validate:98 - ✓ Base URL 配置有效: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-03-03 17:08:26.048 | INFO     | src.config_validator:validate:104 - ✓ 模型名称配置有效: qwen-vl-plus
+2026-03-03 17:08:26.049 | INFO     | src.config_validator:validate:129 - ✓ 配置文件验证通过！
+2026-03-03 17:08:26.049 | INFO     | __main__:create_listener:49 - 
+【监听模式】本地文件模式（推荐）
+2026-03-03 17:08:26.049 | INFO     | __main__:create_listener:50 - 【监听目录】data/temp_images
+2026-03-03 17:08:26.051 | INFO     | __main__:create_listener:51 - 【说明】请将要处理的图片放到此目录
+2026-03-03 17:08:26.051 | INFO     | src.wechat_listener:__init__:50 - ✓ 本地文件监听器初始化成功
+2026-03-03 17:08:26.051 | INFO     | src.wechat_listener:__init__:51 -   监听目录: D:\acceptance_file\one\WeChat_Excel_Automator\data\temp_images
+2026-03-03 17:08:26.051 | INFO     | src.wechat_listener:__init__:52 -   说明: 请将要处理的图片放到此目录
+2026-03-03 17:08:26.051 | INFO     | src.wechat_listener:__init__:53 -   支持格式: .jpg, .jpeg, .png, .bmp, .gif, .webp, .txt
+2026-03-03 17:08:26.053 | INFO     | __main__:main:101 - 正在初始化其他模块...
+2026-03-03 17:08:27.135 | INFO     | src.llm_vision_parser:__init__:30 - ✓ 大模型客户端初始化成功: qwen-vl-plus
+2026-03-03 17:08:27.136 | INFO     | __main__:main:110 - ✓ 大模型解析模块初始化完成
+2026-03-03 17:08:27.136 | INFO     | __main__:main:116 - ✓ 图片处理模块初始化完成
+2026-03-03 17:08:27.136 | INFO     | src.excel_engine:__init__:52 - ✓ Excel 生成器初始化完成，输出目录: data/output_excel
+2026-03-03 17:08:27.137 | INFO     | __main__:main:119 - ✓ Excel 生成模块初始化完成
+2026-03-03 17:08:27.137 | INFO     | __main__:main:121 - ------------------------------------------------------------
+2026-03-03 17:08:27.137 | INFO     | __main__:main:122 - 系统初始化成功！开始监听消息...
+2026-03-03 17:08:27.137 | INFO     | __main__:main:123 - 输出目录: data/output_excel
+2026-03-03 17:08:27.138 | INFO     | __main__:main:124 - ------------------------------------------------------------
+2026-03-03 17:08:27.138 | INFO     | __main__:main:138 - 
+💡 本地文件模式提示：
+2026-03-03 17:08:27.138 | INFO     | __main__:main:139 -    请将要处理的图片文件放到: data/temp_images
+2026-03-03 17:08:27.138 | INFO     | __main__:main:140 -    支持的图片格式: .jpg, .jpeg, .png, .bmp, .gif, .webp
+2026-03-03 17:08:27.139 | INFO     | __main__:main:141 -    支持的文本格式: .txt
+2026-03-03 17:08:27.139 | INFO     | __main__:main:142 - 
+2026-03-03 17:09:01.166 | INFO     | __main__:main:153 - 
+📬 收到 1 条待处理消息
+2026-03-03 17:09:01.166 | INFO     | __main__:main:157 - 【1/1】处理来自【LocalFile】的image信息...
+2026-03-03 17:09:01.184 | INFO     | src.image_processor:preprocess_image:67 - 原始图片尺寸: 1356x203
+2026-03-03 17:09:01.185 | INFO     | src.image_processor:preprocess_image:79 - 执行降噪processing...
+2026-03-03 17:09:01.260 | INFO     | src.image_processor:preprocess_image:83 - 执行对比度增强...
+2026-03-03 17:09:01.471 | INFO     | src.image_processor:preprocess_image:87 - 执行自动旋转校正...
+2026-03-03 17:09:01.527 | INFO     | src.image_processor:preprocess_image:103 - ✓ 预处理完成，临时保存至: data/temp_images/processed\temp_56217e648e7c2900e681a21ef8bb19a7.jpg
+2026-03-03 17:09:01.529 | INFO     | src.llm_vision_parser:parse_content:114 - 已加载图片: data/temp_images/processed\temp_56217e648e7c2900e681a21ef8bb19a7.jpg
+2026-03-03 17:09:01.530 | INFO     | src.llm_vision_parser:parse_content:124 - 正在调用大模型进行数据解析（第1/3次）...
+2026-03-03 17:09:05.804 | INFO     | src.llm_vision_parser:parse_content:151 - ✓ 解析成功，提取到 4 条记录
+2026-03-03 17:09:05.804 | INFO     | src.data_validator:validate_and_clean:114 - ========== 数据清洗统计 ==========
+2026-03-03 17:09:05.804 | INFO     | src.data_validator:validate_and_clean:115 -   总记录数: 4
+2026-03-03 17:09:05.804 | INFO     | src.data_validator:validate_and_clean:116 -   有效记录数: 4
+2026-03-03 17:09:05.809 | INFO     | src.data_validator:validate_and_clean:117 -   跳过记录数: 0
+2026-03-03 17:09:05.809 | INFO     | src.data_validator:validate_and_clean:118 -   清洗完成率: 4/4 (100%)
+2026-03-03 17:09:05.809 | INFO     | src.data_validator:validate_and_clean:119 - ================================
+2026-03-03 17:09:05.809 | INFO     | __main__:main:187 - ✓ 解析成功 - 提取 4 条有效记录
+2026-03-03 17:09:05.817 | INFO     | src.excel_engine:generate:93 - ✓ 已创建 DataFrame: 4 行 x 6 列
+2026-03-03 17:09:05.875 | INFO     | src.excel_engine:generate:106 - ✓ Excel 文件已保存: data/output_excel\表格_LocalFile_20260303_170905.xlsx
+2026-03-03 17:09:05.895 | INFO     | src.excel_engine:generate:111 - ✓ Excel 格式化完成
+2026-03-03 17:09:05.896 | INFO     | src.excel_engine:generate:116 - ========== Excel 生成统计 ==========
+2026-03-03 17:09:05.896 | INFO     | src.excel_engine:generate:117 -   记录数: 4
+2026-03-03 17:09:05.896 | INFO     | src.excel_engine:generate:118 -   字段数: 6
+2026-03-03 17:09:05.897 | INFO     | src.excel_engine:generate:119 -   文件大小: 5.3 KB
+2026-03-03 17:09:05.897 | INFO     | src.excel_engine:generate:120 -   保存路径: data/output_excel\表格_LocalFile_20260303_170905.xlsx
+2026-03-03 17:09:05.897 | INFO     | src.excel_engine:generate:121 - ==================================
+2026-03-03 17:09:05.898 | INFO     | __main__:main:196 - ✓ Excel 已保存: data/output_excel\表格_LocalFile_20260303_170905.xlsx
+2026-03-03 17:24:02.519 | INFO     | __main__:main:153 - 
+📬 收到 1 条待处理消息
+2026-03-03 17:24:02.519 | INFO     | __main__:main:157 - 【1/1】处理来自【LocalFile】的image信息...
+2026-03-03 17:24:02.521 | INFO     | src.image_processor:preprocess_image:67 - 原始图片尺寸: 539x158
+2026-03-03 17:24:02.521 | INFO     | src.image_processor:preprocess_image:79 - 执行降噪processing...
+2026-03-03 17:24:02.539 | INFO     | src.image_processor:preprocess_image:83 - 执行对比度增强...
+2026-03-03 17:24:02.559 | INFO     | src.image_processor:preprocess_image:87 - 执行自动旋转校正...
+2026-03-03 17:24:02.578 | INFO     | src.image_processor:preprocess_image:103 - ✓ 预处理完成，临时保存至: data/temp_images/processed\temp_16b20e9716e2dd4d2be8ea753c336082.jpg
+2026-03-03 17:24:02.579 | INFO     | src.llm_vision_parser:parse_content:114 - 已加载图片: data/temp_images/processed\temp_16b20e9716e2dd4d2be8ea753c336082.jpg
+2026-03-03 17:24:02.579 | INFO     | src.llm_vision_parser:parse_content:124 - 正在调用大模型进行数据解析（第1/3次）...
+2026-03-03 17:24:05.166 | INFO     | src.llm_vision_parser:parse_content:151 - ✓ 解析成功，提取到 4 条记录
+2026-03-03 17:24:05.166 | INFO     | src.data_validator:validate_and_clean:114 - ========== 数据清洗统计 ==========
+2026-03-03 17:24:05.166 | INFO     | src.data_validator:validate_and_clean:115 -   总记录数: 4
+2026-03-03 17:24:05.166 | INFO     | src.data_validator:validate_and_clean:116 -   有效记录数: 0
+2026-03-03 17:24:05.166 | INFO     | src.data_validator:validate_and_clean:117 -   跳过记录数: 4
+2026-03-03 17:24:05.171 | INFO     | src.data_validator:validate_and_clean:118 -   清洗完成率: 0/4 (0%)
+2026-03-03 17:24:05.171 | INFO     | src.data_validator:validate_and_clean:119 - ================================
+2026-03-03 17:24:05.171 | WARNING  | __main__:main:202 - ⚠ 数据清洗后无有效记录
+2026-03-03 17:24:57.210 | INFO     | __main__:main:153 - 
+📬 收到 1 条待处理消息
+2026-03-03 17:24:57.210 | INFO     | __main__:main:157 - 【1/1】处理来自【LocalFile】的image信息...
+2026-03-03 17:24:57.227 | INFO     | src.image_processor:preprocess_image:67 - 原始图片尺寸: 1080x2400
+2026-03-03 17:24:57.228 | INFO     | src.image_processor:preprocess_image:79 - 执行降噪processing...
+2026-03-03 17:24:57.306 | INFO     | src.image_processor:preprocess_image:83 - 执行对比度增强...
+2026-03-03 17:24:57.327 | INFO     | src.image_processor:preprocess_image:87 - 执行自动旋转校正...
+2026-03-03 17:24:57.412 | INFO     | src.image_processor:preprocess_image:103 - ✓ 预处理完成，临时保存至: data/temp_images/processed\temp_26d88fb12deefd5a88c0dec3c5e03eea.jpg
+2026-03-03 17:24:57.413 | INFO     | src.llm_vision_parser:parse_content:114 - 已加载图片: data/temp_images/processed\temp_26d88fb12deefd5a88c0dec3c5e03eea.jpg
+2026-03-03 17:24:57.413 | INFO     | src.llm_vision_parser:parse_content:124 - 正在调用大模型进行数据解析（第1/3次）...
+2026-03-03 17:24:59.102 | INFO     | src.llm_vision_parser:parse_content:151 - ✓ 解析成功，提取到 0 条记录
+2026-03-03 17:24:59.103 | WARNING  | __main__:main:204 - ⚠ 解析失败，跳过该消息
+2026-03-03 17:25:17.127 | INFO     | __main__:main:153 - 
+📬 收到 1 条待处理消息
+2026-03-03 17:25:17.127 | INFO     | __main__:main:157 - 【1/1】处理来自【LocalFile】的image信息...
+2026-03-03 17:25:17.152 | INFO     | src.image_processor:preprocess_image:67 - 原始图片尺寸: 1180x3368
+2026-03-03 17:25:17.152 | INFO     | src.image_processor:preprocess_image:79 - 执行降噪processing...
+2026-03-03 17:25:17.320 | INFO     | src.image_processor:preprocess_image:83 - 执行对比度增强...
+2026-03-03 17:25:17.354 | INFO     | src.image_processor:preprocess_image:87 - 执行自动旋转校正...
+2026-03-03 17:25:17.527 | INFO     | src.image_processor:preprocess_image:103 - ✓ 预处理完成，临时保存至: data/temp_images/processed\temp_edfec24d55d555aff0fb556ef49a03d4.jpg
+2026-03-03 17:25:17.536 | INFO     | src.llm_vision_parser:parse_content:114 - 已加载图片: data/temp_images/processed\temp_edfec24d55d555aff0fb556ef49a03d4.jpg
+2026-03-03 17:25:17.536 | INFO     | src.llm_vision_parser:parse_content:124 - 正在调用大模型进行数据解析（第1/3次）...
+2026-03-03 17:25:34.317 | INFO     | src.llm_vision_parser:parse_content:151 - ✓ 解析成功，提取到 34 条记录
+2026-03-03 17:25:34.324 | INFO     | src.data_validator:validate_and_clean:114 - ========== 数据清洗统计 ==========
+2026-03-03 17:25:34.324 | INFO     | src.data_validator:validate_and_clean:115 -   总记录数: 34
+2026-03-03 17:25:34.324 | INFO     | src.data_validator:validate_and_clean:116 -   有效记录数: 0
+2026-03-03 17:25:34.329 | INFO     | src.data_validator:validate_and_clean:117 -   跳过记录数: 34
+2026-03-03 17:25:34.329 | INFO     | src.data_validator:validate_and_clean:118 -   清洗完成率: 0/34 (0%)
+2026-03-03 17:25:34.331 | INFO     | src.data_validator:validate_and_clean:119 - ================================
+2026-03-03 17:25:34.331 | WARNING  | __main__:main:202 - ⚠ 数据清洗后无有效记录
+2026-03-03 17:42:27.287 | INFO     | __main__:main:215 - 
+============================================================
+2026-03-03 17:42:27.287 | INFO     | __main__:main:216 - 用户手动停止程序
+2026-03-03 17:42:27.287 | INFO     | __main__:main:217 - 本次运行共处理 1 条消息
+2026-03-03 17:42:27.287 | INFO     | __main__:main:218 - ============================================================

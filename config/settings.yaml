@@ -1,0 +1,42 @@
+# =====================================================
+# 微信表格自动化处理工具 - 配置文件
+# =====================================================
+
+# 监听配置
+wechat:
+  mode: "local"
+  listen_dir: "data/temp_images"
+  listen_list:
+    - "文件传输助手"
+  save_pic_dir: "data/temp_images"
+
+# 输出配置
+output:
+  excel_dir: "data/output_excel"
+
+# 大模型 API 配置
+llm:
+  api_key: "sk-7ef02130fc694c6390aab6ce74d7d534"
+  base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+  model_name: "qwen-vl-plus"
+  request_timeout: 30
+  max_retries: 3
+
+# 日志配置
+logging:
+  level: "INFO"
+  retention_days: 7
+  console_output: true
+
+# 图片处理配置
+image:
+  enable_preprocessing: true
+  max_width: 4096
+  max_height: 4096
+  save_processed_images: false
+
+# 数据处理配置
+data:
+  enable_deduplication: true
+  max_empty_fields: 3
+

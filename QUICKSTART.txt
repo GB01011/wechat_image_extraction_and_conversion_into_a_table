@@ -1,0 +1,175 @@
+# 🚀 快速启动（5步完成）
+
+改造已完成！根据以下步骤快速开始使用：
+
+---
+
+## 第 1️⃣ 步：安装依赖
+
+```bash
+cd d:\acceptance_file\one\WeChat_Excel_Automator
+
+# 激活虚拟环境
+interpreter\Scripts\activate
+
+# 安装所有依赖（3-5分钟）
+pip install --no-cache-dir -r requirements.txt
+```
+
+✅ **预期结果**：所有包成功安装，无 wxauto 相关错误
+
+---
+
+## 第 2️⃣ 步：配置 API Key
+
+编辑 `config/settings.yaml`，找到第 46 行，修改为你的真实 API Key：
+
+```yaml
+llm:
+  api_key: "你从阿里云/OpenAI/智谱申请的 API Key"
+  base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+  model_name: "qwen-vl-plus"
+```
+
+💡 **API 申请指南**：
+- **阿里云通义千问**（推荐）：https://bailian.aliyun.com
+- **OpenAI GPT-4V**：https://platform.openai.com  
+- **智谱 GLM-4V**：https://open.bigmodel.cn
+
+---
+
+## 第 3️⃣ 步：准备测试图片
+
+**方式A**：本地文件模式（推荐，目前配置）
+
+找一张包含表格、单据或结构化数据的图片，放到：
+```
+D:\acceptance_file\one\WeChat_Excel_Automator\data\temp_images\
+```
+
+支持格式：`.jpg`, `.jpeg`, `.png`, `.bmp`, `.gif`, `.webp`
+
+---
+
+## 第 4️⃣ 步：运行程序
+
+```bash
+# 确保虚拟环境已激活
+python main.py
+```
+
+✅ **预期输出**：
+```
+============================================================
+微信表格自动化处理工具启动
+============================================================
+✓ 配置文件加载成功
+
+【监听模式】本地文件模式（推荐）
+【监听目录】data\temp_images
+✓ 本地文件监听器初始化成功
+
+✓ 大模型解析模块初始化完成
+✓ 图片处理模块初始化完成
+✓ Excel 生成模块初始化完成
+------------------------------------------------------------
+
+💡 本地文件模式提示：
+   请将要处理的图片放到: data\temp_images
+   支持的图片格式: .jpg, .jpeg, .png, .bmp, .gif, .webp
+```
+
+---
+
+## 第 5️⃣ 步：查看结果
+
+处理完成的 Excel 文件会自动保存到：
+```
+D:\acceptance_file\one\WeChat_Excel_Automator\data\output_excel\
+```
+
+✅ **完成！** 🎉
+
+---
+
+## 🔍 验证改造成功
+
+运行此命令验证所有改造都成功完成：
+
+```bash
+python test_local_listener.py
+```
+
+✅ **完整输出示例**：
+```
+============================================================
+【LocalFileListener 功能测试】
+============================================================
+
+1. 创建测试文本文件
+   ✓ 文件创建成功
+
+2. 初始化 LocalFileListener
+   ✓ 初始化成功
+
+3. 扫描文件
+   ✓ 扫描到 1 条消息
+
+4. 消息详情
+   ✓ 消息类型: text
+   ✓ 消息来源: LocalFile
+   ✓ 文件名: test_product.txt
+
+✓ LocalFileListener 功能验证成功！
+============================================================
+```
+
+---
+
+## ❓ 常见问题
+
+### Q: 还需要安装 wxauto 吗？
+**A**：不需要！已完全移除。本地模式无需 wxauto。
+
+### Q: 支持批量处理吗？
+**A**：支持！放多张图片到 `data/temp_images` 会自动批量处理。
+
+### Q: API Key 用错可以重新配置吗？
+**A**：可以。直接修改 `config/settings.yaml` 中的 API Key，重新运行 `python main.py`。
+
+### Q: 如何切换到微信直连模式？
+**A**：修改 `config/settings.yaml`：
+```yaml
+wechat:
+  mode: "wechat"  # 改这里
+  listen_list:
+    - "你的好友名"
+    - "你的群名"
+```
+然后安装：`pip install wxauto`
+
+---
+
+## 📞 需要帮助？
+
+查看以下文档获取更详细的信息：
+
+| 文档 | 查看时机 |
+|------|--------|
+| **LOCAL_MODE_GUIDE.md** | 第一次使用时 |
+| **REFACTOR_SUMMARY.md** | 了解改造细节 |
+| **USAGE.md** | 高级配置和使用 |
+| **logs/system_*.log** | 遇到错误时 |
+
+---
+
+## 🎯 后续步骤
+
+- ✅ 用几张测试图片验证效果
+- ✅ 检查生成的 Excel 是否符合预期
+- ✅ 根据需要调整配置参数
+- ✅ 考虑定期备份 `data/output_excel` 文件
+
+---
+
+**现在就开始吧！** 🚀
