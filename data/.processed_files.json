@@ -1,0 +1,27 @@
+{
+  "D:\\acceptance_file\\one\\WeChat_Excel_Automator\\data\\temp_images\\test_image_2.jpg": {
+    "timestamp": "2026-03-03T23:50:52.899911",
+    "excel_path": "output/excel_2.xlsx",
+    "status": "success"
+  },
+  "D:\\acceptance_file\\one\\WeChat_Excel_Automator\\data\\temp_images\\test_image_3.jpg": {
+    "timestamp": "2026-03-03T23:50:52.904909",
+    "excel_path": null,
+    "status": "failed"
+  },
+  "D:\\acceptance_file\\one\\WeChat_Excel_Automator\\data\\temp_images\\28900a710b4d255a70275aa6154ac059.jpg": {
+    "timestamp": "2026-03-03T23:57:29.547922",
+    "excel_path": "data/output_excel\\表格_LocalFile_20260303_235729.xlsx",
+    "status": "success"
+  },
+  "D:\\acceptance_file\\one\\WeChat_Excel_Automator\\data\\temp_images\\63d73d0d2ec1d93e43e19ea9af20260b.jpg": {
+    "timestamp": "2026-03-03T23:58:59.032970",
+    "excel_path": "data/output_excel\\表格_LocalFile_20260303_235858.xlsx",
+    "status": "success"
+  },
+  "D:\\acceptance_file\\one\\WeChat_Excel_Automator\\data\\temp_images\\47ab029cd6cc150bb7502820d6965770.jpg": {
+    "timestamp": "2026-03-04T12:02:44.792193",
+    "excel_path": null,
+    "status": "failed"
+  }
+}

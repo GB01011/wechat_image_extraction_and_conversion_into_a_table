@@ -17,6 +17,7 @@ import os
 import time
 from pathlib import Path
 from src.logger import logger
+from src.file_tracker import FileTracker
 
 
 class LocalFileListener:
@@ -41,14 +42,17 @@ class LocalFileListener:
         """
         try:
             self.watch_dir = os.path.abspath(watch_dir)
-            self.processed_files = set()  # 跟踪已处理过的文件
             
             # 创建监听目录
             if not os.path.exists(self.watch_dir):
                 os.makedirs(self.watch_dir)
             
+            # 【新增】初始化文件跟踪器（替代内存中的 processed_files）
+            self.file_tracker = FileTracker()
+            
             logger.info(f"✓ 本地文件监听器初始化成功")
             logger.info(f"  监听目录: {self.watch_dir}")
+            logger.info(f"  已处理文件: {self.file_tracker.get_processed_count()}")
             logger.info(f"  说明: 请将要处理的图片放到此目录")
             logger.info(f"  支持格式: .jpg, .jpeg, .png, .bmp, .gif, .webp, .txt")
         
@@ -76,7 +80,7 @@ class LocalFileListener:
                     continue
                 
                 # 跳过已处理的文件
-                if str(file_path) in self.processed_files:
+                if self.file_tracker.is_processed(file_path):
                     continue
                 
                 # 跳过隐藏文件和临时文件
@@ -96,7 +100,6 @@ class LocalFileListener:
                             'timestamp': time.time()
                         }
                         tasks.append(task)
-                        self.processed_files.add(str(file_path))
                         logger.debug(f"发现新图片: {file_path.name}")
                     
                     except Exception as e:
@@ -117,7 +120,6 @@ class LocalFileListener:
                                 'timestamp': time.time()
                             }
                             tasks.append(task)
-                            self.processed_files.add(str(file_path))
                             logger.debug(f"发现新文本文件: {file_path.name}")
                     
                     except Exception as e:
@@ -128,6 +130,17 @@ class LocalFileListener:
         except Exception as e:
             logger.error(f"❌ 扫描本地文件夹失败: {e}")
             return []
+    
+    def mark_processed(self, file_path, excel_path=None, status="success"):
+        """
+        标记文件为已处理
+        
+        Args:
+            file_path: 文件路径
+            excel_path: 生成的 Excel 文件路径（可选）
+            status: 处理状态（"success", "failed"）
+        """
+        self.file_tracker.mark_as_processed(file_path, excel_path, status)
 
 
 class WeChatBot:

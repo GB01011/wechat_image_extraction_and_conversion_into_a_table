@@ -1039,3 +1039,284 @@
 2026-03-03 22:23:48.821 | INFO     | src.excel_engine:generate:131 -   保存路径: data/output_excel\表格_LocalFile_20260303_222348.xlsx
 2026-03-03 22:23:48.821 | INFO     | src.excel_engine:generate:132 - ==================================
 2026-03-03 22:23:48.821 | INFO     | __main__:main:198 - ✓ Excel 已保存: data/output_excel\表格_LocalFile_20260303_222348.xlsx
+2026-03-03 23:31:41.036 | INFO     | __main__:main:219 - 
+============================================================
+2026-03-03 23:31:41.042 | INFO     | __main__:main:220 - 用户手动停止程序
+2026-03-03 23:31:41.042 | INFO     | __main__:main:221 - 本次运行共处理 1 条消息
+2026-03-03 23:31:41.043 | INFO     | __main__:main:222 - ============================================================
+2026-03-03 23:31:51.669 | INFO     | __main__:main:63 - ============================================================
+2026-03-03 23:31:51.669 | INFO     | __main__:main:64 - 微信表格自动化处理工具启动
+2026-03-03 23:31:51.669 | INFO     | __main__:main:65 - ============================================================
+2026-03-03 23:31:51.669 | INFO     | __main__:load_config:24 - ✓ 配置文件加载成功
+2026-03-03 23:31:51.669 | INFO     | src.config_validator:validate:32 - 开始验证配置文件...
+2026-03-03 23:31:51.669 | INFO     | src.config_validator:validate:56 - ✓ 本地模式配置有效: data/temp_images
+2026-03-03 23:31:51.674 | INFO     | src.config_validator:validate:71 - ✓ 输出配置有效: data/output_excel
+2026-03-03 23:31:51.674 | INFO     | src.config_validator:validate:92 - ✓ API Key 配置有效
+2026-03-03 23:31:51.674 | INFO     | src.config_validator:validate:98 - ✓ Base URL 配置有效: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-03-03 23:31:51.674 | INFO     | src.config_validator:validate:104 - ✓ 模型名称配置有效: qwen-vl-plus
+2026-03-03 23:31:51.676 | INFO     | src.config_validator:validate:129 - ✓ 配置文件验证通过！
+2026-03-03 23:31:51.676 | INFO     | __main__:create_listener:50 - 
+【监听模式】本地文件模式（推荐）
+2026-03-03 23:31:51.676 | INFO     | __main__:create_listener:51 - 【监听目录】data/temp_images
+2026-03-03 23:31:51.677 | INFO     | __main__:create_listener:52 - 【说明】请将要处理的图片放到此目录
+2026-03-03 23:31:51.677 | INFO     | src.wechat_listener:__init__:50 - ✓ 本地文件监听器初始化成功
+2026-03-03 23:31:51.677 | INFO     | src.wechat_listener:__init__:51 -   监听目录: D:\acceptance_file\one\WeChat_Excel_Automator\data\temp_images
+2026-03-03 23:31:51.678 | INFO     | src.wechat_listener:__init__:52 -   说明: 请将要处理的图片放到此目录
+2026-03-03 23:31:51.680 | INFO     | src.wechat_listener:__init__:53 -   支持格式: .jpg, .jpeg, .png, .bmp, .gif, .webp, .txt
+2026-03-03 23:31:51.681 | INFO     | __main__:main:84 - 正在初始化其他模块...
+2026-03-03 23:31:52.807 | INFO     | src.llm_vision_parser:__init__:74 - ✓ LLM 解析器已初始化: qwen-vl-plus
+2026-03-03 23:31:52.807 | INFO     | __main__:main:93 - ✓ 大模型解析模块初始化完成
+2026-03-03 23:31:52.807 | INFO     | __main__:main:99 - ✓ 图片处理模块初始化完成
+2026-03-03 23:31:52.807 | INFO     | src.excel_engine:__init__:50 - ✓ Excel 生成器初始化完成，输出目录: data/output_excel
+2026-03-03 23:31:52.807 | INFO     | __main__:main:102 - ✓ Excel 生成模块初始化完成
+2026-03-03 23:31:52.807 | INFO     | __main__:main:104 - ------------------------------------------------------------
+2026-03-03 23:31:52.807 | INFO     | __main__:main:105 - 系统初始化成功！开始监听消息...
+2026-03-03 23:31:52.807 | INFO     | __main__:main:106 - 输出目录: data/output_excel
+2026-03-03 23:31:52.807 | INFO     | __main__:main:107 - ------------------------------------------------------------
+2026-03-03 23:31:52.811 | INFO     | __main__:main:120 - 
+💡 本地文件模式提示：
+2026-03-03 23:31:52.811 | INFO     | __main__:main:121 -    请将要处理的图片文件放到: data/temp_images
+2026-03-03 23:31:52.811 | INFO     | __main__:main:122 -    支持的图片格式: .jpg, .jpeg, .png, .bmp, .gif, .webp
+2026-03-03 23:31:52.811 | INFO     | __main__:main:123 -    支持的文本格式: .txt
+2026-03-03 23:31:52.812 | INFO     | __main__:main:124 - 
+2026-03-03 23:32:22.828 | INFO     | __main__:main:135 - 
+📬 收到 1 条待处理消息
+2026-03-03 23:32:22.828 | INFO     | __main__:main:139 - 【1/1】处理来自【LocalFile】的image信息...
+2026-03-03 23:32:22.840 | INFO     | src.image_processor:preprocess_image:67 - 原始图片尺寸: 1032x760
+2026-03-03 23:32:22.844 | INFO     | src.image_processor:preprocess_image:79 - 执行降噪processing...
+2026-03-03 23:32:22.920 | INFO     | src.image_processor:preprocess_image:83 - 执行对比度增强...
+2026-03-03 23:32:23.104 | INFO     | src.image_processor:preprocess_image:87 - 执行自动旋转校正...
+2026-03-03 23:32:23.162 | INFO     | src.image_processor:preprocess_image:103 - ✓ 预处理完成，临时保存至: data/temp_images/processed\temp_28900a710b4d255a70275aa6154ac059.jpg
+2026-03-03 23:32:23.162 | INFO     | src.llm_vision_parser:_parse_image:110 - 已加载图片: data/temp_images/processed\temp_28900a710b4d255a70275aa6154ac059.jpg
+2026-03-03 23:32:23.162 | INFO     | src.llm_vision_parser:_parse_image:111 - 正在调用大模型进行表格识别（第1/3次）...
+2026-03-03 23:32:29.373 | INFO     | src.llm_vision_parser:_extract_and_parse_json:259 - ✓ JSON 解析成功（直接解析）
+2026-03-03 23:32:29.373 | INFO     | src.llm_vision_parser:_parse_image:148 - ✓ 大模型识别成功
+2026-03-03 23:32:29.373 | INFO     | src.table_structure_detector:detect_structure:69 - ✓ 表格结构检测完成
+2026-03-03 23:32:29.373 | INFO     | src.table_structure_detector:detect_structure:70 -   - 有表格: True
+2026-03-03 23:32:29.373 | INFO     | src.table_structure_detector:detect_structure:71 -   - 有列名: True
+2026-03-03 23:32:29.373 | INFO     | src.table_structure_detector:detect_structure:73 -   - 列名: ['序号', '房类', '房号', '- 转入', '+ 转出', '到达', '离开', '天数', '房价', '包价', '特殊要求', '余额']
+2026-03-03 23:32:29.373 | INFO     | src.table_structure_detector:detect_structure:74 -   - 数据行数: 2
+2026-03-03 23:32:29.373 | INFO     | src.table_structure_detector:detect_structure:75 -   - 数据格式: object
+2026-03-03 23:32:29.373 | INFO     | src.data_validator:validate_and_clean:56 - 📋 开始数据清洗，列名: ['序号', '房类', '房号', '- 转入', '+ 转出', '到达', '离开', '天数', '房价', '包价', '特殊要求', '余额']
+2026-03-03 23:32:29.378 | INFO     | src.data_validator:validate_and_clean:130 - ========== 数据清洗统计 ==========
+2026-03-03 23:32:29.378 | INFO     | src.data_validator:validate_and_clean:131 -   总记录数: 2
+2026-03-03 23:32:29.378 | INFO     | src.data_validator:validate_and_clean:132 -   有效记录数: 2
+2026-03-03 23:32:29.378 | INFO     | src.data_validator:validate_and_clean:133 -   跳过记录数: 0
+2026-03-03 23:32:29.378 | INFO     | src.data_validator:validate_and_clean:135 -   清洗完成率: 2/2 (100%)
+2026-03-03 23:32:29.381 | INFO     | src.data_validator:validate_and_clean:136 - ================================
+2026-03-03 23:32:29.381 | INFO     | __main__:main:187 - ✓ 解析成功 - 提取 2 条有效记录
+2026-03-03 23:32:29.381 | INFO     | __main__:main:188 - ✓ 识别列名: ['序号', '房类', '房号', '- 转入', '+ 转出', '到达', '离开', '天数', '房价', '包价', '特殊要求', '余额']
+2026-03-03 23:32:29.382 | INFO     | src.excel_engine:generate:91 - ✓ 列名确定: ['序号', '房类', '房号', '- 转入', '+ 转出', '到达', '离开', '天数', '房价', '包价', '特殊要求', '余额']
+2026-03-03 23:32:29.384 | INFO     | src.excel_engine:generate:104 - ✓ 已创建 DataFrame: 2 行 x 12 列
+2026-03-03 23:32:29.417 | INFO     | src.excel_engine:generate:117 - ✓ Excel 文件已保存: data/output_excel\表格_LocalFile_20260303_233229.xlsx
+2026-03-03 23:32:29.441 | INFO     | src.excel_engine:generate:122 - ✓ Excel 格式化完成
+2026-03-03 23:32:29.441 | INFO     | src.excel_engine:generate:127 - ========== Excel 生成统计 ==========
+2026-03-03 23:32:29.441 | INFO     | src.excel_engine:generate:128 -   记录数: 2
+2026-03-03 23:32:29.442 | INFO     | src.excel_engine:generate:129 -   字段数: 12
+2026-03-03 23:32:29.442 | INFO     | src.excel_engine:generate:130 -   文件大小: 5.3 KB
+2026-03-03 23:32:29.442 | INFO     | src.excel_engine:generate:131 -   保存路径: data/output_excel\表格_LocalFile_20260303_233229.xlsx
+2026-03-03 23:32:29.442 | INFO     | src.excel_engine:generate:132 - ==================================
+2026-03-03 23:32:29.443 | INFO     | __main__:main:198 - ✓ Excel 已保存: data/output_excel\表格_LocalFile_20260303_233229.xlsx
+2026-03-03 23:50:52.889 | INFO     | __main__:test_file_tracker:21 - ============================================================
+2026-03-03 23:50:52.890 | INFO     | __main__:test_file_tracker:22 - 🧪 开始测试文件跟踪功能
+2026-03-03 23:50:52.891 | INFO     | __main__:test_file_tracker:23 - ============================================================
+2026-03-03 23:50:52.891 | INFO     | __main__:test_file_tracker:26 - 
+[测试 1] 初始化文件跟踪器
+2026-03-03 23:50:52.891 | INFO     | __main__:test_file_tracker:27 - ------------------------------------------------------------
+2026-03-03 23:50:52.893 | INFO     | src.file_tracker:__init__:32 - ✓ 文件跟踪器已初始化
+2026-03-03 23:50:52.893 | INFO     | src.file_tracker:__init__:33 -   记录文件: D:\acceptance_file\one\WeChat_Excel_Automator\data\.processed_files.json
+2026-03-03 23:50:52.894 | INFO     | src.file_tracker:__init__:34 -   已记录文件数: 0
+2026-03-03 23:50:52.895 | INFO     | __main__:test_file_tracker:32 - ✓ 文件跟踪器初始化成功
+2026-03-03 23:50:52.895 | INFO     | __main__:test_file_tracker:33 -   总文件数: 0
+2026-03-03 23:50:52.895 | INFO     | __main__:test_file_tracker:34 -   成功: 0
+2026-03-03 23:50:52.896 | INFO     | __main__:test_file_tracker:35 -   失败: 0
+2026-03-03 23:50:52.897 | INFO     | __main__:test_file_tracker:36 -   跳过: 0
+2026-03-03 23:50:52.897 | INFO     | __main__:test_file_tracker:39 - 
+[测试 2] 标记文件为已处理
+2026-03-03 23:50:52.898 | INFO     | __main__:test_file_tracker:40 - ------------------------------------------------------------
+2026-03-03 23:50:52.899 | INFO     | src.file_tracker:mark_as_processed:112 - ✓ 文件已标记为已处理: test_image_1.jpg
+2026-03-03 23:50:52.904 | INFO     | src.file_tracker:mark_as_processed:112 - ✓ 文件已标记为已处理: test_image_2.jpg
+2026-03-03 23:50:52.908 | WARNING  | src.file_tracker:mark_as_processed:114 - ⚠ 文件标记为失败: test_image_3.jpg
+2026-03-03 23:50:52.908 | INFO     | __main__:test_file_tracker:52 - ✓ 文件标记完成
+2026-03-03 23:50:52.909 | INFO     | __main__:test_file_tracker:53 -   总文件数: 3 (增加 3 个)
+2026-03-03 23:50:52.910 | INFO     | __main__:test_file_tracker:54 -   成功: 2
+2026-03-03 23:50:52.910 | INFO     | __main__:test_file_tracker:55 -   失败: 1
+2026-03-03 23:50:52.910 | INFO     | __main__:test_file_tracker:58 - 
+[测试 3] 检查文件是否已处理
+2026-03-03 23:50:52.911 | INFO     | __main__:test_file_tracker:59 - ------------------------------------------------------------
+2026-03-03 23:50:52.911 | INFO     | __main__:test_file_tracker:65 - ✓ test_image_1.jpg 已处理: True
+2026-03-03 23:50:52.912 | INFO     | __main__:test_file_tracker:66 - ✓ test_image_2.jpg 已处理: True
+2026-03-03 23:50:52.912 | INFO     | __main__:test_file_tracker:67 - ✓ test_unknown.jpg 已处理: False
+2026-03-03 23:50:52.912 | INFO     | __main__:test_file_tracker:73 - ✓ 所有检查通过
+2026-03-03 23:50:52.913 | INFO     | __main__:test_file_tracker:76 - 
+[测试 4] 从跟踪中移除文件
+2026-03-03 23:50:52.913 | INFO     | __main__:test_file_tracker:77 - ------------------------------------------------------------
+2026-03-03 23:50:52.914 | INFO     | src.file_tracker:remove_file:193 - ✓ 文件已从跟踪中移除，将重新处理: test_image_1.jpg
+2026-03-03 23:50:52.914 | INFO     | __main__:test_file_tracker:82 - ✓ test_image_1.jpg 已从跟踪中移除
+2026-03-03 23:50:52.915 | INFO     | __main__:test_file_tracker:83 - ✓ 移除后，test_image_1.jpg 已处理: False
+2026-03-03 23:50:52.915 | INFO     | __main__:test_file_tracker:86 - ✓ 移除验证通过
+2026-03-03 23:50:52.915 | INFO     | __main__:test_file_tracker:89 - 
+[测试 5] 检查跟踪记录文件
+2026-03-03 23:50:52.916 | INFO     | __main__:test_file_tracker:90 - ------------------------------------------------------------
+2026-03-03 23:50:52.916 | INFO     | __main__:test_file_tracker:97 - ✓ 跟踪记录文件存在: data\.processed_files.json
+2026-03-03 23:50:52.916 | INFO     | __main__:test_file_tracker:98 - ✓ 记录文件数: 2
+2026-03-03 23:50:52.917 | INFO     | __main__:test_file_tracker:104 -    [1] test_image_2.jpg: success
+2026-03-03 23:50:52.917 | INFO     | __main__:test_file_tracker:104 -    [2] test_image_3.jpg: failed
+2026-03-03 23:50:52.917 | INFO     | __main__:test_file_tracker:107 - 
+[测试 6] LocalFileListener 集成测试
+2026-03-03 23:50:52.918 | INFO     | __main__:test_file_tracker:108 - ------------------------------------------------------------
+2026-03-03 23:50:52.918 | INFO     | src.file_tracker:_load_tracker:47 - ✓ 成功加载跟踪记录，包含 2 个文件
+2026-03-03 23:50:52.919 | INFO     | src.file_tracker:__init__:32 - ✓ 文件跟踪器已初始化
+2026-03-03 23:50:52.921 | INFO     | src.file_tracker:__init__:33 -   记录文件: D:\acceptance_file\one\WeChat_Excel_Automator\data\.processed_files.json
+2026-03-03 23:50:52.923 | INFO     | src.file_tracker:__init__:34 -   已记录文件数: 2
+2026-03-03 23:50:52.923 | INFO     | src.wechat_listener:__init__:53 - ✓ 本地文件监听器初始化成功
+2026-03-03 23:50:52.923 | INFO     | src.wechat_listener:__init__:54 -   监听目录: D:\acceptance_file\one\WeChat_Excel_Automator\data\temp_images
+2026-03-03 23:50:52.924 | INFO     | src.wechat_listener:__init__:55 -   已处理文件: 2
+2026-03-03 23:50:52.925 | INFO     | src.wechat_listener:__init__:56 -   说明: 请将要处理的图片放到此目录
+2026-03-03 23:50:52.925 | INFO     | src.wechat_listener:__init__:57 -   支持格式: .jpg, .jpeg, .png, .bmp, .gif, .webp, .txt
+2026-03-03 23:50:52.925 | INFO     | __main__:test_file_tracker:113 - ✓ LocalFileListener 初始化成功
+2026-03-03 23:50:52.926 | INFO     | __main__:test_file_tracker:114 - ✓ 已处理文件数: 2
+2026-03-03 23:50:52.927 | INFO     | __main__:test_file_tracker:118 - ✓ 扫描结果: 1 个新消息
+2026-03-03 23:50:52.927 | WARNING  | __main__:test_file_tracker:121 - ⚠ 检测到意外的新消息（可能有新图片在目录中）
+2026-03-03 23:50:52.928 | INFO     | __main__:test_file_tracker:123 -    - 28900a710b4d255a70275aa6154ac059.jpg
+2026-03-03 23:50:52.928 | INFO     | __main__:test_file_tracker:125 - ✓ 集成测试完成
+2026-03-03 23:50:52.929 | INFO     | __main__:test_file_tracker:128 - 
+============================================================
+2026-03-03 23:50:52.929 | INFO     | __main__:test_file_tracker:129 - ✅ 所有测试通过！
+2026-03-03 23:50:52.929 | INFO     | __main__:test_file_tracker:130 - ============================================================
+2026-03-03 23:50:52.930 | INFO     | __main__:test_file_tracker:133 - 
+最终统计:
+2026-03-03 23:50:52.930 | INFO     | __main__:test_file_tracker:134 -   总文件数: 2
+2026-03-03 23:50:52.930 | INFO     | __main__:test_file_tracker:135 -   成功处理: 1
+2026-03-03 23:50:52.930 | INFO     | __main__:test_file_tracker:136 -   处理失败: 1
+2026-03-03 23:50:52.931 | INFO     | __main__:test_file_tracker:137 -   跳过: 0
+2026-03-03 23:50:52.931 | INFO     | __main__:test_file_tracker:138 - 
+跟踪记录文件: D:\acceptance_file\one\WeChat_Excel_Automator\data\.processed_files.json
+2026-03-03 23:56:45.320 | INFO     | __main__:main:219 - 
+============================================================
+2026-03-03 23:56:45.320 | INFO     | __main__:main:220 - 用户手动停止程序
+2026-03-03 23:56:45.321 | INFO     | __main__:main:221 - 本次运行共处理 1 条消息
+2026-03-03 23:56:45.321 | INFO     | __main__:main:222 - ============================================================
+2026-03-03 23:57:21.416 | INFO     | __main__:main:63 - ============================================================
+2026-03-03 23:57:21.417 | INFO     | __main__:main:64 - 微信表格自动化处理工具启动
+2026-03-03 23:57:21.417 | INFO     | __main__:main:65 - ============================================================
+2026-03-03 23:57:21.420 | INFO     | __main__:load_config:24 - ✓ 配置文件加载成功
+2026-03-03 23:57:21.420 | INFO     | src.config_validator:validate:32 - 开始验证配置文件...
+2026-03-03 23:57:21.421 | INFO     | src.config_validator:validate:56 - ✓ 本地模式配置有效: data/temp_images
+2026-03-03 23:57:21.421 | INFO     | src.config_validator:validate:71 - ✓ 输出配置有效: data/output_excel
+2026-03-03 23:57:21.421 | INFO     | src.config_validator:validate:92 - ✓ API Key 配置有效
+2026-03-03 23:57:21.422 | INFO     | src.config_validator:validate:98 - ✓ Base URL 配置有效: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-03-03 23:57:21.422 | INFO     | src.config_validator:validate:104 - ✓ 模型名称配置有效: qwen-vl-plus
+2026-03-03 23:57:21.422 | INFO     | src.config_validator:validate:129 - ✓ 配置文件验证通过！
+2026-03-03 23:57:21.422 | INFO     | __main__:create_listener:50 - 
+【监听模式】本地文件模式（推荐）
+2026-03-03 23:57:21.422 | INFO     | __main__:create_listener:51 - 【监听目录】data/temp_images
+2026-03-03 23:57:21.422 | INFO     | __main__:create_listener:52 - 【说明】请将要处理的图片放到此目录
+2026-03-03 23:57:21.424 | INFO     | src.file_tracker:_load_tracker:47 - ✓ 成功加载跟踪记录，包含 2 个文件
+2026-03-03 23:57:21.424 | INFO     | src.file_tracker:__init__:32 - ✓ 文件跟踪器已初始化
+2026-03-03 23:57:21.424 | INFO     | src.file_tracker:__init__:33 -   记录文件: D:\acceptance_file\one\WeChat_Excel_Automator\data\.processed_files.json
+2026-03-03 23:57:21.425 | INFO     | src.file_tracker:__init__:34 -   已记录文件数: 2
+2026-03-03 23:57:21.425 | INFO     | src.wechat_listener:__init__:53 - ✓ 本地文件监听器初始化成功
+2026-03-03 23:57:21.425 | INFO     | src.wechat_listener:__init__:54 -   监听目录: D:\acceptance_file\one\WeChat_Excel_Automator\data\temp_images
+2026-03-03 23:57:21.425 | INFO     | src.wechat_listener:__init__:55 -   已处理文件: 2
+2026-03-03 23:57:21.426 | INFO     | src.wechat_listener:__init__:56 -   说明: 请将要处理的图片放到此目录
+2026-03-03 23:57:21.426 | INFO     | src.wechat_listener:__init__:57 -   支持格式: .jpg, .jpeg, .png, .bmp, .gif, .webp, .txt
+2026-03-03 23:57:21.426 | INFO     | __main__:main:84 - 正在初始化其他模块...
+2026-03-03 23:57:22.530 | INFO     | src.llm_vision_parser:__init__:74 - ✓ LLM 解析器已初始化: qwen-vl-plus
+2026-03-03 23:57:22.531 | INFO     | __main__:main:93 - ✓ 大模型解析模块初始化完成
+2026-03-03 23:57:22.531 | INFO     | __main__:main:99 - ✓ 图片处理模块初始化完成
+2026-03-03 23:57:22.532 | INFO     | src.excel_engine:__init__:50 - ✓ Excel 生成器初始化完成，输出目录: data/output_excel
+2026-03-03 23:57:22.532 | INFO     | __main__:main:102 - ✓ Excel 生成模块初始化完成
+2026-03-03 23:57:22.532 | INFO     | __main__:main:104 - ------------------------------------------------------------
+2026-03-03 23:57:22.533 | INFO     | __main__:main:105 - 系统初始化成功！开始监听消息...
+2026-03-03 23:57:22.533 | INFO     | __main__:main:106 - 输出目录: data/output_excel
+2026-03-03 23:57:22.533 | INFO     | __main__:main:107 - ------------------------------------------------------------
+2026-03-03 23:57:22.533 | INFO     | __main__:main:120 - 
+💡 本地文件模式提示：
+2026-03-03 23:57:22.534 | INFO     | __main__:main:121 -    请将要处理的图片文件放到: data/temp_images
+2026-03-03 23:57:22.534 | INFO     | __main__:main:122 -    支持的图片格式: .jpg, .jpeg, .png, .bmp, .gif, .webp
+2026-03-03 23:57:22.534 | INFO     | __main__:main:123 -    支持的文本格式: .txt
+2026-03-03 23:57:22.534 | INFO     | __main__:main:124 - 
+2026-03-03 23:57:22.535 | INFO     | __main__:main:135 - 
+📬 收到 1 条待处理消息
+2026-03-03 23:57:22.535 | INFO     | __main__:main:139 - 【1/1】处理来自【LocalFile】的image信息...
+2026-03-03 23:57:22.547 | INFO     | src.image_processor:preprocess_image:67 - 原始图片尺寸: 1032x760
+2026-03-03 23:57:22.548 | INFO     | src.image_processor:preprocess_image:79 - 执行降噪processing...
+2026-03-03 23:57:22.604 | INFO     | src.image_processor:preprocess_image:83 - 执行对比度增强...
+2026-03-03 23:57:22.784 | INFO     | src.image_processor:preprocess_image:87 - 执行自动旋转校正...
+2026-03-03 23:57:22.845 | INFO     | src.image_processor:preprocess_image:103 - ✓ 预处理完成，临时保存至: data/temp_images/processed\temp_28900a710b4d255a70275aa6154ac059.jpg
+2026-03-03 23:57:22.845 | INFO     | src.llm_vision_parser:_parse_image:110 - 已加载图片: data/temp_images/processed\temp_28900a710b4d255a70275aa6154ac059.jpg
+2026-03-03 23:57:22.846 | INFO     | src.llm_vision_parser:_parse_image:111 - 正在调用大模型进行表格识别（第1/3次）...
+2026-03-03 23:57:29.488 | INFO     | src.llm_vision_parser:_extract_and_parse_json:259 - ✓ JSON 解析成功（直接解析）
+2026-03-03 23:57:29.489 | INFO     | src.llm_vision_parser:_parse_image:148 - ✓ 大模型识别成功
+2026-03-03 23:57:29.489 | INFO     | src.table_structure_detector:detect_structure:69 - ✓ 表格结构检测完成
+2026-03-03 23:57:29.489 | INFO     | src.table_structure_detector:detect_structure:70 -   - 有表格: True
+2026-03-03 23:57:29.490 | INFO     | src.table_structure_detector:detect_structure:71 -   - 有列名: True
+2026-03-03 23:57:29.490 | INFO     | src.table_structure_detector:detect_structure:73 -   - 列名: ['', '房类', '房号', '-', '总价', '到达', '离开', '天数', '房价', '包价', '特殊要求', '余额']
+2026-03-03 23:57:29.490 | INFO     | src.table_structure_detector:detect_structure:74 -   - 数据行数: 2
+2026-03-03 23:57:29.490 | INFO     | src.table_structure_detector:detect_structure:75 -   - 数据格式: object
+2026-03-03 23:57:29.491 | INFO     | src.data_validator:validate_and_clean:56 - 📋 开始数据清洗，列名: ['', '房类', '房号', '-', '总价', '到达', '离开', '天数', '房价', '包价', '特殊要求', '余额']
+2026-03-03 23:57:29.491 | INFO     | src.data_validator:validate_and_clean:130 - ========== 数据清洗统计 ==========
+2026-03-03 23:57:29.492 | INFO     | src.data_validator:validate_and_clean:131 -   总记录数: 2
+2026-03-03 23:57:29.492 | INFO     | src.data_validator:validate_and_clean:132 -   有效记录数: 2
+2026-03-03 23:57:29.492 | INFO     | src.data_validator:validate_and_clean:133 -   跳过记录数: 0
+2026-03-03 23:57:29.492 | INFO     | src.data_validator:validate_and_clean:135 -   清洗完成率: 2/2 (100%)
+2026-03-03 23:57:29.493 | INFO     | src.data_validator:validate_and_clean:136 - ================================
+2026-03-03 23:57:29.493 | INFO     | __main__:main:207 - ✓ 解析成功 - 提取 2 条有效记录
+2026-03-03 23:57:29.493 | INFO     | __main__:main:208 - ✓ 识别列名: ['', '房类', '房号', '-', '总价', '到达', '离开', '天数', '房价', '包价', '特殊要求', '余额']
+2026-03-03 23:57:29.493 | INFO     | src.excel_engine:generate:91 - ✓ 列名确定: ['', '房类', '房号', '-', '总价', '到达', '离开', '天数', '房价', '包价', '特殊要求', '余额']
+2026-03-03 23:57:29.496 | INFO     | src.excel_engine:generate:104 - ✓ 已创建 DataFrame: 2 行 x 12 列
+2026-03-03 23:57:29.521 | INFO     | src.excel_engine:generate:117 - ✓ Excel 文件已保存: data/output_excel\表格_LocalFile_20260303_235729.xlsx
+2026-03-03 23:57:29.544 | INFO     | src.excel_engine:generate:122 - ✓ Excel 格式化完成
+2026-03-03 23:57:29.544 | INFO     | src.excel_engine:generate:127 - ========== Excel 生成统计 ==========
+2026-03-03 23:57:29.545 | INFO     | src.excel_engine:generate:128 -   记录数: 2
+2026-03-03 23:57:29.545 | INFO     | src.excel_engine:generate:129 -   字段数: 12
+2026-03-03 23:57:29.545 | INFO     | src.excel_engine:generate:130 -   文件大小: 5.3 KB
+2026-03-03 23:57:29.546 | INFO     | src.excel_engine:generate:131 -   保存路径: data/output_excel\表格_LocalFile_20260303_235729.xlsx
+2026-03-03 23:57:29.546 | INFO     | src.excel_engine:generate:132 - ==================================
+2026-03-03 23:57:29.546 | INFO     | __main__:main:218 - ✓ Excel 已保存: data/output_excel\表格_LocalFile_20260303_235729.xlsx
+2026-03-03 23:57:29.548 | INFO     | src.file_tracker:mark_as_processed:112 - ✓ 文件已标记为已处理: 28900a710b4d255a70275aa6154ac059.jpg
+2026-03-03 23:58:35.672 | INFO     | __main__:main:135 - 
+📬 收到 1 条待处理消息
+2026-03-03 23:58:35.672 | INFO     | __main__:main:139 - 【1/1】处理来自【LocalFile】的image信息...
+2026-03-03 23:58:35.676 | INFO     | src.image_processor:preprocess_image:67 - 原始图片尺寸: 542x472
+2026-03-03 23:58:35.677 | INFO     | src.image_processor:preprocess_image:79 - 执行降噪processing...
+2026-03-03 23:58:35.710 | INFO     | src.image_processor:preprocess_image:83 - 执行对比度增强...
+2026-03-03 23:58:35.715 | INFO     | src.image_processor:preprocess_image:87 - 执行自动旋转校正...
+2026-03-03 23:58:35.767 | INFO     | src.image_processor:preprocess_image:103 - ✓ 预处理完成，临时保存至: data/temp_images/processed\temp_63d73d0d2ec1d93e43e19ea9af20260b.jpg
+2026-03-03 23:58:35.767 | INFO     | src.llm_vision_parser:_parse_image:110 - 已加载图片: data/temp_images/processed\temp_63d73d0d2ec1d93e43e19ea9af20260b.jpg
+2026-03-03 23:58:35.773 | INFO     | src.llm_vision_parser:_parse_image:111 - 正在调用大模型进行表格识别（第1/3次）...
+2026-03-03 23:58:58.938 | INFO     | src.llm_vision_parser:_extract_and_parse_json:259 - ✓ JSON 解析成功（直接解析）
+2026-03-03 23:58:58.938 | INFO     | src.llm_vision_parser:_parse_image:148 - ✓ 大模型识别成功
+2026-03-03 23:58:58.938 | INFO     | src.table_structure_detector:detect_structure:69 - ✓ 表格结构检测完成
+2026-03-03 23:58:58.938 | INFO     | src.table_structure_detector:detect_structure:70 -   - 有表格: True
+2026-03-03 23:58:58.938 | INFO     | src.table_structure_detector:detect_structure:71 -   - 有列名: True
+2026-03-03 23:58:58.938 | INFO     | src.table_structure_detector:detect_structure:73 -   - 列名: ['列名1', '列名2', '列名3', '列名4', '列名5']
+2026-03-03 23:58:58.938 | INFO     | src.table_structure_detector:detect_structure:74 -   - 数据行数: 42
+2026-03-03 23:58:58.938 | INFO     | src.table_structure_detector:detect_structure:75 -   - 数据格式: object
+2026-03-03 23:58:58.938 | INFO     | src.data_validator:validate_and_clean:56 - 📋 开始数据清洗，列名: ['列名1', '列名2', '列名3', '列名4', '列名5']
+2026-03-03 23:58:58.955 | INFO     | src.data_validator:validate_and_clean:130 - ========== 数据清洗统计 ==========
+2026-03-03 23:58:58.955 | INFO     | src.data_validator:validate_and_clean:131 -   总记录数: 42
+2026-03-03 23:58:58.956 | INFO     | src.data_validator:validate_and_clean:132 -   有效记录数: 16
+2026-03-03 23:58:58.957 | INFO     | src.data_validator:validate_and_clean:133 -   跳过记录数: 26
+2026-03-03 23:58:58.957 | INFO     | src.data_validator:validate_and_clean:135 -   清洗完成率: 16/42 (38%)
+2026-03-03 23:58:58.959 | INFO     | src.data_validator:validate_and_clean:136 - ================================
+2026-03-03 23:58:58.959 | INFO     | __main__:main:207 - ✓ 解析成功 - 提取 16 条有效记录
+2026-03-03 23:58:58.963 | INFO     | __main__:main:208 - ✓ 识别列名: ['列名1', '列名2', '列名3', '列名4', '列名5']
+2026-03-03 23:58:58.963 | INFO     | src.excel_engine:generate:91 - ✓ 列名确定: ['列名1', '列名2', '列名3', '列名4', '列名5']
+2026-03-03 23:58:58.968 | INFO     | src.excel_engine:generate:104 - ✓ 已创建 DataFrame: 16 行 x 5 列
+2026-03-03 23:58:59.002 | INFO     | src.excel_engine:generate:117 - ✓ Excel 文件已保存: data/output_excel\表格_LocalFile_20260303_235858.xlsx
+2026-03-03 23:58:59.028 | INFO     | src.excel_engine:generate:122 - ✓ Excel 格式化完成
+2026-03-03 23:58:59.028 | INFO     | src.excel_engine:generate:127 - ========== Excel 生成统计 ==========
+2026-03-03 23:58:59.028 | INFO     | src.excel_engine:generate:128 -   记录数: 16
+2026-03-03 23:58:59.028 | INFO     | src.excel_engine:generate:129 -   字段数: 5
+2026-03-03 23:58:59.028 | INFO     | src.excel_engine:generate:130 -   文件大小: 5.5 KB
+2026-03-03 23:58:59.028 | INFO     | src.excel_engine:generate:131 -   保存路径: data/output_excel\表格_LocalFile_20260303_235858.xlsx
+2026-03-03 23:58:59.028 | INFO     | src.excel_engine:generate:132 - ==================================
+2026-03-03 23:58:59.028 | INFO     | __main__:main:218 - ✓ Excel 已保存: data/output_excel\表格_LocalFile_20260303_235858.xlsx
+2026-03-03 23:58:59.039 | INFO     | src.file_tracker:mark_as_processed:112 - ✓ 文件已标记为已处理: 63d73d0d2ec1d93e43e19ea9af20260b.jpg
+2026-03-03 23:59:41.495 | INFO     | __main__:main:262 - 
+============================================================
+2026-03-03 23:59:41.495 | INFO     | __main__:main:263 - 用户手动停止程序
+2026-03-03 23:59:41.495 | INFO     | __main__:main:264 - 本次运行共处理 2 条消息
+2026-03-03 23:59:41.495 | INFO     | __main__:main:265 - ============================================================

@@ -161,16 +161,36 @@ def main():
                     # 【新增】检测表格结构，识别动态列名
                     if parsed_data is None:
                         logger.warning("⚠ 解析失败（LLM 返回 None），跳过该消息")
+                        # 【新增】标记为失败
+                        listener.mark_processed(
+                            file_path=task["data"],
+                            status="failed"
+                        )
                     elif not parsed_data.get('has_table', False):
                         logger.warning("⚠ 未识别到有效的表格内容")
+                        # 【新增】标记为失败
+                        listener.mark_processed(
+                            file_path=task["data"],
+                            status="failed"
+                        )
                     else:
                         # 检测表格结构
                         structure_result = TableStructureDetector.detect_structure(parsed_data)
                         
                         if structure_result is None:
                             logger.warning("⚠ 表格结构检测失败，跳过该消息")
+                            # 【新增】标记为失败
+                            listener.mark_processed(
+                                file_path=task["data"],
+                                status="failed"
+                            )
                         elif not structure_result.get('has_table', False):
                             logger.warning("⚠ 表格检测器确认无有效表格")
+                            # 【新增】标记为失败
+                            listener.mark_processed(
+                                file_path=task["data"],
+                                status="failed"
+                            )
                         else:
                             # 规范化数据格式，确保所有数据都是字典格式
                             try:
@@ -196,16 +216,39 @@ def main():
                                     
                                     if excel_path:
                                         logger.info(f"✓ Excel 已保存: {excel_path}")
+                                        
+                                        # 【新增】标记文件为已处理
+                                        listener.mark_processed(
+                                            file_path=task["data"],
+                                            excel_path=excel_path,
+                                            status="success"
+                                        )
+                                        
                                         message_count += 1
                                         error_count = 0  # 重置错误计数
                                     else:
                                         logger.warning("⚠ Excel 生成失败")
+                                        # 【新增】标记为失败
+                                        listener.mark_processed(
+                                            file_path=task["data"],
+                                            status="failed"
+                                        )
                                 else:
                                     logger.warning("⚠ 数据清洗后无有效记录")
+                                    # 【新增】标记为失败
+                                    listener.mark_processed(
+                                        file_path=task["data"],
+                                        status="failed"
+                                    )
                             except Exception as e:
                                 logger.error(f"❌ 数据处理失败: {e}")
                                 import traceback
                                 logger.error(traceback.format_exc())
+                                # 【新增】标记为失败
+                                listener.mark_processed(
+                                    file_path=task["data"],
+                                    status="failed"
+                                )
                 
                 except Exception as e:
                     logger.error(f"❌ 处理消息时发生异常: {e}")

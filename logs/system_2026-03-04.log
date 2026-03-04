@@ -1,0 +1,61 @@
+2026-03-04 12:01:30.048 | INFO     | __main__:main:63 - ============================================================
+2026-03-04 12:01:30.048 | INFO     | __main__:main:64 - 微信表格自动化处理工具启动
+2026-03-04 12:01:30.048 | INFO     | __main__:main:65 - ============================================================
+2026-03-04 12:01:30.055 | INFO     | __main__:load_config:24 - ✓ 配置文件加载成功
+2026-03-04 12:01:30.055 | INFO     | src.config_validator:validate:32 - 开始验证配置文件...
+2026-03-04 12:01:30.055 | INFO     | src.config_validator:validate:56 - ✓ 本地模式配置有效: data/temp_images
+2026-03-04 12:01:30.055 | INFO     | src.config_validator:validate:71 - ✓ 输出配置有效: data/output_excel
+2026-03-04 12:01:30.057 | INFO     | src.config_validator:validate:92 - ✓ API Key 配置有效
+2026-03-04 12:01:30.057 | INFO     | src.config_validator:validate:98 - ✓ Base URL 配置有效: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-03-04 12:01:30.057 | INFO     | src.config_validator:validate:104 - ✓ 模型名称配置有效: qwen-vl-plus
+2026-03-04 12:01:30.057 | INFO     | src.config_validator:validate:129 - ✓ 配置文件验证通过！
+2026-03-04 12:01:30.057 | INFO     | __main__:create_listener:50 - 
+【监听模式】本地文件模式（推荐）
+2026-03-04 12:01:30.058 | INFO     | __main__:create_listener:51 - 【监听目录】data/temp_images
+2026-03-04 12:01:30.058 | INFO     | __main__:create_listener:52 - 【说明】请将要处理的图片放到此目录
+2026-03-04 12:01:30.059 | INFO     | src.file_tracker:_load_tracker:47 - ✓ 成功加载跟踪记录，包含 4 个文件
+2026-03-04 12:01:30.059 | INFO     | src.file_tracker:__init__:32 - ✓ 文件跟踪器已初始化
+2026-03-04 12:01:30.059 | INFO     | src.file_tracker:__init__:33 -   记录文件: D:\acceptance_file\one\WeChat_Excel_Automator\data\.processed_files.json
+2026-03-04 12:01:30.059 | INFO     | src.file_tracker:__init__:34 -   已记录文件数: 4
+2026-03-04 12:01:30.060 | INFO     | src.wechat_listener:__init__:53 - ✓ 本地文件监听器初始化成功
+2026-03-04 12:01:30.060 | INFO     | src.wechat_listener:__init__:54 -   监听目录: D:\acceptance_file\one\WeChat_Excel_Automator\data\temp_images
+2026-03-04 12:01:30.060 | INFO     | src.wechat_listener:__init__:55 -   已处理文件: 4
+2026-03-04 12:01:30.061 | INFO     | src.wechat_listener:__init__:56 -   说明: 请将要处理的图片放到此目录
+2026-03-04 12:01:30.061 | INFO     | src.wechat_listener:__init__:57 -   支持格式: .jpg, .jpeg, .png, .bmp, .gif, .webp, .txt
+2026-03-04 12:01:30.061 | INFO     | __main__:main:84 - 正在初始化其他模块...
+2026-03-04 12:01:31.180 | INFO     | src.llm_vision_parser:__init__:74 - ✓ LLM 解析器已初始化: qwen-vl-plus
+2026-03-04 12:01:31.181 | INFO     | __main__:main:93 - ✓ 大模型解析模块初始化完成
+2026-03-04 12:01:31.181 | INFO     | __main__:main:99 - ✓ 图片处理模块初始化完成
+2026-03-04 12:01:31.181 | INFO     | src.excel_engine:__init__:50 - ✓ Excel 生成器初始化完成，输出目录: data/output_excel
+2026-03-04 12:01:31.182 | INFO     | __main__:main:102 - ✓ Excel 生成模块初始化完成
+2026-03-04 12:01:31.182 | INFO     | __main__:main:104 - ------------------------------------------------------------
+2026-03-04 12:01:31.182 | INFO     | __main__:main:105 - 系统初始化成功！开始监听消息...
+2026-03-04 12:01:31.182 | INFO     | __main__:main:106 - 输出目录: data/output_excel
+2026-03-04 12:01:31.183 | INFO     | __main__:main:107 - ------------------------------------------------------------
+2026-03-04 12:01:31.183 | INFO     | __main__:main:120 - 
+💡 本地文件模式提示：
+2026-03-04 12:01:31.183 | INFO     | __main__:main:121 -    请将要处理的图片文件放到: data/temp_images
+2026-03-04 12:01:31.183 | INFO     | __main__:main:122 -    支持的图片格式: .jpg, .jpeg, .png, .bmp, .gif, .webp
+2026-03-04 12:01:31.184 | INFO     | __main__:main:123 -    支持的文本格式: .txt
+2026-03-04 12:01:31.184 | INFO     | __main__:main:124 - 
+2026-03-04 12:02:41.288 | INFO     | __main__:main:135 - 
+📬 收到 1 条待处理消息
+2026-03-04 12:02:41.288 | INFO     | __main__:main:139 - 【1/1】处理来自【LocalFile】的image信息...
+2026-03-04 12:02:41.328 | INFO     | src.image_processor:preprocess_image:67 - 原始图片尺寸: 1080x1920
+2026-03-04 12:02:41.328 | INFO     | src.image_processor:preprocess_image:79 - 执行降噪processing...
+2026-03-04 12:02:41.402 | INFO     | src.image_processor:preprocess_image:83 - 执行对比度增强...
+2026-03-04 12:02:41.637 | INFO     | src.image_processor:preprocess_image:87 - 执行自动旋转校正...
+2026-03-04 12:02:41.772 | INFO     | src.image_processor:_auto_rotate:239 - 检测到文本倾斜角度: 45.00°，进行校正
+2026-03-04 12:02:41.811 | INFO     | src.image_processor:_auto_rotate:256 - ✓ 旋转完成，新尺寸: 2121x2121
+2026-03-04 12:02:41.856 | INFO     | src.image_processor:preprocess_image:103 - ✓ 预处理完成，临时保存至: data/temp_images/processed\temp_47ab029cd6cc150bb7502820d6965770.jpg
+2026-03-04 12:02:41.856 | INFO     | src.llm_vision_parser:_parse_image:110 - 已加载图片: data/temp_images/processed\temp_47ab029cd6cc150bb7502820d6965770.jpg
+2026-03-04 12:02:41.856 | INFO     | src.llm_vision_parser:_parse_image:111 - 正在调用大模型进行表格识别（第1/3次）...
+2026-03-04 12:02:44.792 | INFO     | src.llm_vision_parser:_extract_and_parse_json:259 - ✓ JSON 解析成功（直接解析）
+2026-03-04 12:02:44.792 | INFO     | src.llm_vision_parser:_parse_image:148 - ✓ 大模型识别成功
+2026-03-04 12:02:44.792 | WARNING  | __main__:main:170 - ⚠ 未识别到有效的表格内容
+2026-03-04 12:02:44.792 | WARNING  | src.file_tracker:mark_as_processed:114 - ⚠ 文件标记为失败: 47ab029cd6cc150bb7502820d6965770.jpg
+2026-03-04 12:03:11.328 | INFO     | __main__:main:262 - 
+============================================================
+2026-03-04 12:03:11.328 | INFO     | __main__:main:263 - 用户手动停止程序
+2026-03-04 12:03:11.328 | INFO     | __main__:main:264 - 本次运行共处理 0 条消息
+2026-03-04 12:03:11.328 | INFO     | __main__:main:265 - ============================================================
