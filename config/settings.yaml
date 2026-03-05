@@ -16,7 +16,7 @@ output:
 
 # 大模型 API 配置
 llm:
-  api_key: "sk-7ef02130fc694c6390aab6ce74d7d534"
+  api_key: "换成自己的API Key"
   base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
   model_name: "qwen-vl-plus"
   request_timeout: 30

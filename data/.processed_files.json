@@ -23,5 +23,15 @@
     "timestamp": "2026-03-04T12:02:44.792193",
     "excel_path": null,
     "status": "failed"
+  },
+  "D:\\acceptance_file\\one\\WeChat_Excel_Automator\\data\\temp_images\\ScreenShot_2026-03-05_153852_632.png": {
+    "timestamp": "2026-03-05T15:39:32.164510",
+    "excel_path": "data/output_excel\\表格_LocalFile_20260305_153932.xlsx",
+    "status": "success"
+  },
+  "D:\\acceptance_file\\one\\WeChat_Excel_Automator\\data\\temp_images\\ScreenShot_2026-03-05_154202_650.png": {
+    "timestamp": "2026-03-05T15:42:20.652227",
+    "excel_path": "data/output_excel\\表格_LocalFile_20260305_154220.xlsx",
+    "status": "success"
   }
 }

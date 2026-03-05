@@ -59,3 +59,48 @@
 2026-03-04 12:03:11.328 | INFO     | __main__:main:263 - 用户手动停止程序
 2026-03-04 12:03:11.328 | INFO     | __main__:main:264 - 本次运行共处理 0 条消息
 2026-03-04 12:03:11.328 | INFO     | __main__:main:265 - ============================================================
+2026-03-04 12:05:37.585 | INFO     | __main__:main:63 - ============================================================
+2026-03-04 12:05:37.587 | INFO     | __main__:main:64 - 微信表格自动化处理工具启动
+2026-03-04 12:05:37.587 | INFO     | __main__:main:65 - ============================================================
+2026-03-04 12:05:37.590 | INFO     | __main__:load_config:24 - ✓ 配置文件加载成功
+2026-03-04 12:05:37.590 | INFO     | src.config_validator:validate:32 - 开始验证配置文件...
+2026-03-04 12:05:37.590 | INFO     | src.config_validator:validate:56 - ✓ 本地模式配置有效: data/temp_images
+2026-03-04 12:05:37.590 | INFO     | src.config_validator:validate:71 - ✓ 输出配置有效: data/output_excel
+2026-03-04 12:05:37.591 | INFO     | src.config_validator:validate:92 - ✓ API Key 配置有效
+2026-03-04 12:05:37.591 | INFO     | src.config_validator:validate:98 - ✓ Base URL 配置有效: https://dashscope.aliyuncs.com/compatible-mode/v1
+2026-03-04 12:05:37.591 | INFO     | src.config_validator:validate:104 - ✓ 模型名称配置有效: qwen-vl-plus
+2026-03-04 12:05:37.592 | INFO     | src.config_validator:validate:129 - ✓ 配置文件验证通过！
+2026-03-04 12:05:37.592 | INFO     | __main__:create_listener:50 - 
+【监听模式】本地文件模式（推荐）
+2026-03-04 12:05:37.592 | INFO     | __main__:create_listener:51 - 【监听目录】data/temp_images
+2026-03-04 12:05:37.593 | INFO     | __main__:create_listener:52 - 【说明】请将要处理的图片放到此目录
+2026-03-04 12:05:37.593 | INFO     | src.file_tracker:_load_tracker:47 - ✓ 成功加载跟踪记录，包含 5 个文件
+2026-03-04 12:05:37.594 | INFO     | src.file_tracker:__init__:32 - ✓ 文件跟踪器已初始化
+2026-03-04 12:05:37.594 | INFO     | src.file_tracker:__init__:33 -   记录文件: D:\acceptance_file\one\WeChat_Excel_Automator\data\.processed_files.json
+2026-03-04 12:05:37.595 | INFO     | src.file_tracker:__init__:34 -   已记录文件数: 5
+2026-03-04 12:05:37.595 | INFO     | src.wechat_listener:__init__:53 - ✓ 本地文件监听器初始化成功
+2026-03-04 12:05:37.595 | INFO     | src.wechat_listener:__init__:54 -   监听目录: D:\acceptance_file\one\WeChat_Excel_Automator\data\temp_images
+2026-03-04 12:05:37.595 | INFO     | src.wechat_listener:__init__:55 -   已处理文件: 5
+2026-03-04 12:05:37.596 | INFO     | src.wechat_listener:__init__:56 -   说明: 请将要处理的图片放到此目录
+2026-03-04 12:05:37.596 | INFO     | src.wechat_listener:__init__:57 -   支持格式: .jpg, .jpeg, .png, .bmp, .gif, .webp, .txt
+2026-03-04 12:05:37.596 | INFO     | __main__:main:84 - 正在初始化其他模块...
+2026-03-04 12:05:38.648 | INFO     | src.llm_vision_parser:__init__:74 - ✓ LLM 解析器已初始化: qwen-vl-plus
+2026-03-04 12:05:38.649 | INFO     | __main__:main:93 - ✓ 大模型解析模块初始化完成
+2026-03-04 12:05:38.649 | INFO     | __main__:main:99 - ✓ 图片处理模块初始化完成
+2026-03-04 12:05:38.649 | INFO     | src.excel_engine:__init__:50 - ✓ Excel 生成器初始化完成，输出目录: data/output_excel
+2026-03-04 12:05:38.650 | INFO     | __main__:main:102 - ✓ Excel 生成模块初始化完成
+2026-03-04 12:05:38.650 | INFO     | __main__:main:104 - ------------------------------------------------------------
+2026-03-04 12:05:38.650 | INFO     | __main__:main:105 - 系统初始化成功！开始监听消息...
+2026-03-04 12:05:38.650 | INFO     | __main__:main:106 - 输出目录: data/output_excel
+2026-03-04 12:05:38.650 | INFO     | __main__:main:107 - ------------------------------------------------------------
+2026-03-04 12:05:38.651 | INFO     | __main__:main:120 - 
+💡 本地文件模式提示：
+2026-03-04 12:05:38.651 | INFO     | __main__:main:121 -    请将要处理的图片文件放到: data/temp_images
+2026-03-04 12:05:38.651 | INFO     | __main__:main:122 -    支持的图片格式: .jpg, .jpeg, .png, .bmp, .gif, .webp
+2026-03-04 12:05:38.651 | INFO     | __main__:main:123 -    支持的文本格式: .txt
+2026-03-04 12:05:38.652 | INFO     | __main__:main:124 - 
+2026-03-04 12:09:10.425 | INFO     | __main__:main:262 - 
+============================================================
+2026-03-04 12:09:10.425 | INFO     | __main__:main:263 - 用户手动停止程序
+2026-03-04 12:09:10.425 | INFO     | __main__:main:264 - 本次运行共处理 0 条消息
+2026-03-04 12:09:10.425 | INFO     | __main__:main:265 - ============================================================
